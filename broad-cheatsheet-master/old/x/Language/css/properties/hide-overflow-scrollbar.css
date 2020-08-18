@@ -1,0 +1,11 @@
+/*
+HIDE OVERFLOW SCROLLBAR
+ */
+.element {
+  -ms-overflow-style: none;  /* IE 10+ */
+  overflow: -moz-scrollbars-none; /* Old ver. Firefox */
+  scrollbar-width: none;  /* Firefox */
+}
+.element::-webkit-scrollbar {
+  display: none; /* Safari & Chrome */
+}

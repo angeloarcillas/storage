@@ -1,0 +1,81 @@
+<!-- show/hide/slide/fade/toggle -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <title>jQuery</title>
+  </head>
+  <body>
+    <button class="menu-toggle" type="button" name="button">Toggle</button>
+    <nav class="side-nav">
+      <ul>
+        <li>This</li>
+        <li>Home</li>
+        <li>Portfolio</li>
+        <li>About me</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+
+    <div class="">
+      <h1 class="info-tittle" >Hello</h1>
+      <p class="info-content" >This is a cheatsheet for jQuery</p>
+    </div>
+
+  </body>
+
+  <script>
+    $(document).ready(function(){
+
+      //hide menu
+      $('.menu-toggle').click(function(){
+        $('.side-nav').hide();
+        //fadeOut
+      });
+
+      //show menu
+      $('.menu-toggle').click(function(){
+        $('.side-nav').show();
+        //fadeIn
+      });
+
+      //hide/show menu
+      $('.menu-toggle').click(function(){
+        $('.side-nav').toggle();
+        //fadeToggle(1000)
+      });
+
+      //hide/show menu
+      $('.menu-toggle').click(function(){
+                                //speed      1000 -> 1sec             callback
+        //(1000, function) -> (number of sec to show/hide) , (another method/action)
+        $('.side-nav').toggle(1000,function(){
+          alert('Alert');
+        });
+      });
+
+      //change menu opacity
+      $('.menu-toggle').click(function(){
+                                      //speed                        css opacity           callback
+        //(1000, 0.5, function) -> (number of sec to show/hide) , (change css opacity) , (another method/action)
+        $('.side-nav').fadeTo(1000, 0.5, function(){
+          alert("alert");
+        });
+      });
+
+      //slide up/down /toggle
+      $('.menu-toggle').click(function(){
+        $('.side-nav').slideUp();
+        //slideDown()
+        //slideToggle()
+        //slideToggle(1000)
+      });
+
+    });
+  </script>
+</html>

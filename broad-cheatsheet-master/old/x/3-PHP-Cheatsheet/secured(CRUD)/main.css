@@ -1,0 +1,100 @@
+body{
+  padding: 0px;
+  margin: 0px;
+/*navigation*/
+}
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.nav li {
+
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+.nav li:last-child {
+  border-right: none;
+}
+
+.nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+
+.nav li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: black;
+}
+
+/*message*/
+.msg {
+    margin: 30px auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    width: 30%;
+    text-align: center;
+}
+
+/* register */
+.form-reg {
+    width: 50%;
+    margin: 50px auto;
+    text-align: left;
+    padding: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.form-input {
+    margin: 10px 0px 10px 0px;
+}
+.form-input label {
+    text-align: left;
+    display: block;
+    margin: 3px;
+}
+.form-input input {
+    height: 20px;
+    width: 80%;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+/*controls*/
+table{
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    text-align: left;
+}
+tr {
+    border-bottom: 1px solid black;
+}
+th, td{
+    border: none;
+    height: 30px;
+    padding: 2px;
+}
+tr:hover {
+    background: gray;
+}
+
+.btn{
+  text-decoration: none;
+}

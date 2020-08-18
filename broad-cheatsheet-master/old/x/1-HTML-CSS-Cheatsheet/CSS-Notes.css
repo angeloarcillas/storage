@@ -1,0 +1,382 @@
+CSS -Cascading Stylesheet
+
+=================SELECTOR=================
+-https://www.w3schools.com/css/css_combinators.asp
+
+* -> all
+p -> element
+.name -> class
+#name -> id
+div#name -> id selector | div.name -> class selector
+div p -> descendant selector (space)
+div > p ->  child selector (>)
+div + p -> adjacent sibling selector (+)
+div ~ p -> general sibling selector (~)
+
+[ Attribute]
+[attr] { property: value; } -> select element
+[attr*="value"] -> select all elements with  value
+[attr='value'] { property: value; } -> select elements with specific value
+[attr^='val'] { property: value; } -> select elements whose attribute value starts with a specified value
+[attr$='ue'] { property: value; } -> select elements whose attribute value ends with a specified value
+[attr~='foo'] { property: value; } -> select elements with an attribute value containing a specified word
+[attr|='en'] { property: value; } ->  select elements with the specified attribute starting with the specified value + hyphen (-) foo-bar
+
+[ Pseudo Element/Class] -https://www.w3schools.com/css/css_pseudo_classes.asp
+
+[ Class ]
+:hover -> mouse over
+:link -> unvisited link
+:visited -> visited link
+:active -> selected link
+:focus -> selected input
+:checked -> checked input
+:disabled -> disabled input
+:in-range -> range input
+:invalid -> invalid input
+:empty -> element that has no child
+:enabled -> enabled input
+:not(selector) -> select every element that is not selector // :not(p)
+:lang(foo) -> select the <p lang="foo"> content<p/> //p:lang(val) {}
+
+:first-child | :last-child -> select first/last element
+:nth-child(even) -> child("selector") => 3n+0 / 2n+1 (every nth + start from n)
+
+[ Element ]
+::before | ::after ->  change b/a content/effect
+::first-line -> change 1st line
+::first-letter -> change 1st letter
+::selection -> hightlighted
+
+
+=========VARIABLES================
+-https://www.w3schools.com/css/css3_variables.asp
+
+:root {  ->highest element
+--textColor: #ccc; -> create var
+}
+.class {
+ color: var(--textColor); -> assign var
+--text-size:14px; -> create child var // usable by child only
+}
+.class p {
+font-size: var(--text-size); -> assign var to child element
+}
+
+=============PREFIX==============
+-webkit-sticky -> target certain browser using webkit
+-o -> target opera
+-moz -> target mozila
+
+============SIZE=============
+width | height | max-width | max-height
+margin -> change margin | padding -> change padding
+	-1px -> all side
+	-1px 2px -> top/bot left/right
+	-1px 2px 1px -> top left/right bot
+
+calc() -> calculate width/height
+[calc(100vh - 100px)] / [calc(100vw - 100px)] -> view hieght/width
+
+[ Relative Lengths ]
+-https://www.w3schools.com/css/css_units.asp
+
+% -> percent
+em -> multiples of element original size
+rem -> root element size
+vw | vh -> multiples of viewport`s 1% width/height
+vmin | vmax -> vh/vw smaller/greater
+ex -> x-height of font
+ch -> width of the 0
+
+[ Absolute Lengths ]
+px -> pixel
+pt -> points
+pc -> picas
+cm -> centimeter
+mm -> millimeterval
+in -> inch
+
+=================COLOR===============
+#HEX -> short/long hex value
+rgb() | rgba() -> 255/100%
+hsl() | hsla() -> 100%
+transparent -> alpha=0
+
+=================BACKGROUND=================
+-https://www.w3schools.com/css/css_background.asp
+-https://www.w3schools.com/css/css3_backgrounds.asp
+
+background -> all property
+background-image -> add bg img // add comma for multiple img
+	-url('path') | none | linear/radial-gradient |repeating-linear/radial-gradient
+background-color -> add bg color
+background-repeat ->  bg img type
+	-repeat | no-repeat | repeat-x/y | space | round
+background-size ->  bg img size
+	-auto | length | percentage | cover | contain
+background-origin -> bg position
+	-padding-box | border-box | content-box
+background-position -> bg starting position
+background-clip -> painting area of bg
+	-padding-box | border-box | content-box
+background-attachment -> position type
+	-scroll | fixed | local
+
+[ Gradients ]-https://www.w3schools.com/css/css3_gradients.asp
+background-image:
+Linear Gradients (goes down/up/left/right/diagonally)
+Radial Gradients (defined by their center)
+
+============BORDER | OUTLINE | SHADOWS | BOX================
+-https://www.w3schools.com/css/css_border.asp
+
+[ Border]
+border:1px solid black; -> size-style-color
+border-radius -> border radius
+
+[Border Image] -https://www.w3schools.com/css/css3_border_images.asp
+border-image ->  add image on border // transparent border-color
+border-image-source ->
+border-image-repeat
+border-image-slice
+border-image-width
+border-image-outset
+
+[ Outline ] - outer border
+outline
+outline-offset
+
+[ Shadows ] -https://www.w3schools.com/css/css3_shadows.asp
+2px 2px  4px red= x-axis y-axis blur color
+text-shadow
+box-shadow
+
+[ Box ] -https://www.w3schools.com/cssref/css3_pr_box-sizing.asp
+box-sizing
+	-content-box | border-box
+======================TEXT=========================
+-https://www.w3schools.com/css/css_text.asp
+
+color -> change font color
+font -> all properties
+font-family ->  font type // , -> ifelse
+font-size ->  font size
+font-weight ->  font tickness
+text-transform ->  font  case
+font-variant
+text decoration ->  text decoration
+text-shadow ->  text shadow
+
+white-space -> white-space type // wrap/no wrap
+text-align -> horizontal position
+vertical-align -> vertical position
+text-indent -> indent 1st line
+letter-spacing
+word-spacing
+line-height -> change text margin
+word-wrap
+word-break
+writing-mode -> text direction+position
+text-align-last -> last texts position
+text-justify -> text position
+text-overflow
+	-clip | ellipsis | string
+
+direction -> text direction
+unicode-bidi -> bidirectional text // used with direction
+
+[ List]
+list-style
+list-style-image -> specify img
+list-style-position -> text position
+list-style-type
+
+[ Counter ] -https://www.w3schools.com/css/css_counters.asp
+
+// -https://www.w3schools.com/css/css3_fonts.asp
+@font-face { font-family:foo; src:url(foo) } -> custom font //no IE8+ support
+
+=========image========
+Image -https://www.w3schools.com/css/css3_images.asp
+	-filter()
+objec-fit -https://www.w3schools.com/css/css3_object-fit.asp
+		-specify img/vid to fit its container
+	-fill | contain | cover | none | scale-down
+
+=================DISPLAY=================
+-https://www.w3schools.com/cssref/pr_class_display.asp
+
+Display -> change display
+	-inline -> goes with element
+	-block -> 100% width
+	-inline-block -> inline but respect own size
+
+opacity
+	-filter:alpha(opacity=x) -> IE8+
+z-index -> order index
+
+[ Position ]
+[ Keyword Values ]
+position: static; -> goes with page
+position: relative; ->  position on container
+position: absolute; -> no container
+position: fixed; -> fixed position
+position: sticky; -> sticky position
+
+[ Global values ]
+position: initial; -> set default value
+position: inherit; -> inherit value
+position: unset; -> unset value
+
+top -> change element position
+left -> change element position
+bottom -> change element position
+right -> change element position
+
+[ Overflow ]
+overflow | overflow-x | overflox-y
+	-visible | hidden | scroll | auto
+
+[ Float | Clear ] -https://www.w3schools.com/css/css_float.asp
+
+float-> float left | right // compatible w/ overflow
+clear -> clear float
+	-none | left | right | both
+
+[ Clearfix ]
+content: "";
+clear: both;
+display: table;
+
+[ content ] -https://www.w3schools.com/cssref/pr_gen_content.asp
+
+=================FORM==================
+resize -> add resize option // goes w/ all box
+[ Tooltip ] -https://www.w3schools.com/css/css_tooltip.asp
+
+=================TABLE===================
+table-spacing -> change spaces
+border-collapse -> collapse border
+caption-side -> caption position
+empty-cells -> hide | show empty cell
+table-layout
+
+================TRANSFORM=====================
+-https://www.w3schools.com/css/css3_2dtransforms.asp
+-https://www.w3schools.com/css/css3_3dtransforms.asp
+
+//NOTE: use prefix
+transform -> 2D/3D transformations
+translate -> change position
+	-translateX | translateY | translateZ
+rotate(20deg) -> rotate
+scale(2, 3) -> change width | height
+	-scaleX | scaleY | scaleZ
+skew(2, 3) -> skew x | y angle
+	-skewX | skewY | skewZ
+matrix -> all properties
+transform-origin -https://www.w3schools.com/cssref/css3_pr_transform-origin.asp
+	-x/y/z axis
+transform-style -> specify nested element in 3D
+backface-visibility -> used to hide back faced object
+perspective:20px -> give 3D object perspective
+perspective-origin: x | y axis
+
+================TRANSITION===================
+-https://www.w3schools.com/cssref/css3_pr_transition.asp
+
+//NOTE: use prefix -webkit
+transition -> all properties //transition: all 2s ease-in-out 4s;
+	-property duration timing-function delay
+transition-duration
+transition-delay
+transition-property -> selector
+transition-timing-function -> transition speed curve
+
+===============ANIMATION===================
+-https://www.w3schools.com/css/css3_animations.asp
+
+//prefix -webkit
+    @keyframes -> specift animation code // @keyframes foo {}
+	-0%-100% | from- to
+animation -> all properties
+	-animation: name duration timing-function delay iteration-count direction fill-mode play-state;
+animation-name ->  keyframes animation name
+animation-duration ->
+animation-timing-function -> animation speed curve
+animation-delay
+animation-iteration-count -> counter
+animation-direction -> animation direction
+	-normal | reverse | alternate | alternate-reverse
+animation-fill-mode -> fill mode
+	-forwards | backwards | both
+animation-play-state -> running/pause
+
+=================FLEX-BOX=================
+-https://www.w3schools.com/css/css3_flexbox.asp
+
+flex-wrap -> text wrap type
+flex-direction -> row/column
+flex-flow  ->  wrap+direction
+
+justify-content -> horizontal position
+align-items -> content position
+align-content -> content position + space
+
+order -> change content order
+
+flex-grow -> increase content width
+flex-shrink -> decrease content width
+flex-basis -> change content size
+flex -> grow shrink basis //flex: 0 1 100px;
+
+=============GRID======================
+-https://www.w3schools.com/css/css_grid.asp
+
+grid-template-collumns: 1fr 1fr -> fr - frame => meter ->2 collumns
+grid-template-rows:1fr 1fr -> can also use other meter
+
+grid-template-areas:  ->change position using 2D+
+"var var"
+"var2 var2"
+". var3 var4 ." -> " . " means white space
+"var5 var 5";
+
+.class {
+grid-area: var;
+
+grid-collumn: 1 / 3; -> take 1 to 3 space
+grid-collumn: span 1 -> span the collumn
+}
+
+grid-collumn-start -> float left
+grid-collumn-end -> float right
+
+=====================RESPONSIVE=====================
+[ Media-Query ]
+@media print{ ... } -> when printed
+
+@media only screen and (min-width: 320px) and (max-width: 479px){ ... } -> sm
+@media only screen and (min-width: 480px) and (max-width: 767px){ ... } -> md
+@media only screen and (min-width: 768px) and (max-width: 991px){ ... } -> lg
+@media only screen and (min-width: 992px){ ... } -> xl
+
+===============RESOURCE======================
+Icons - https://www.w3schools.com/css/css_icons.asp
+Buttons -https://www.w3schools.com/css/css3_buttons.asp
+Pagination -https://www.w3schools.com/css/css3_pagination.asp
+multi-columns -https://www.w3schools.com/css/css3_multiple_columns.asp // like bootstrap col class
+Template -https://www.w3schools.com/css/css_rwd_templates.asp
+
+==============FOOTER ALWAYS DOWN=================
+body {
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}

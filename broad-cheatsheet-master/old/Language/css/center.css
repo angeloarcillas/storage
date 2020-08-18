@@ -1,0 +1,14 @@
+.parent {
+  border: 1px solid #333;
+  height: 250px;
+  position: relative;
+  width: 250px;
+}
+
+.child {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}

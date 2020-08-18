@@ -1,0 +1,16 @@
+/*
+canvas width
+canvas height
+path
+img size
+img repeat
+img position
+*/
+img {
+  width: 300px;
+  height: 200px;
+  background-image: url();
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center left;
+}

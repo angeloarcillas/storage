@@ -1,0 +1,183 @@
+"A datetime string with format `Y-m-d H:i:s`, e.g. `2018-01-01 13:00:00`."
+scalar DateTime
+    @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\DateTime")
+
+"A date string with format `Y-m-d`, e.g. `2011-05-23`."
+scalar Date @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\Date")
+
+type Query {
+    # sort + paginate users
+    users(orderBy: [OrderByClause!] @orderBy): [User!]!
+        @paginate(defaultCount: 10)
+    # find specific use | @eq - eloquent query
+    user(id: ID @eq): User @find
+    # get current auth user
+    authUser: User @auth
+}
+
+# extend query
+extend type Query {
+    # fetch all post
+    posts: [Post!]! @all
+    post(id: ID @eq): Post @find
+}
+
+input OrderByClause {
+    # database field
+    field: String!
+    # orderBy
+    order: SortOrder!
+}
+
+# enumerate
+enum SortOrder {
+    ASC
+    DESC
+}
+
+type Mutation {
+    # create user | @bcryt - use bcrypt
+    createUser(name: String!, email: String!, password: String! @bcrypt): User
+        @create
+    # update user
+    updateUser(
+        id: ID!
+        name: String
+        email: String!
+        password: String! @bcrypt
+    ): User @update
+    # delete user
+    deleteUser(id: ID!): User @delete
+
+    createPost(title: String!, description: String, user_id: ID): Post @create
+    updatePost(id: ID!, title: String!, description: String): Post @update
+    deletePost(id: ID!): Post @delete
+}
+
+type User {
+    id: ID!
+    name: String!
+    email: String!
+    password: String!
+    created_at: DateTime!
+    updated_at: DateTime!
+    # eloquent relationship
+    posts: [Post!] @hasMany
+}
+
+type Post {
+    id: ID!
+    title: String!
+    description: String
+    # eloquent relationship
+    user: User @belongsTo
+}
+
+
+## QUERY ##
+
+# @paginate | first: page:
+query {
+    users(first: 1) {
+        data {
+            id
+            name
+        }
+        paginatorInfo {
+            currentPage
+            lastPage
+        }
+    }
+}
+# @find id:
+query {
+    user(id: 51) {
+        name
+        email
+        password
+        posts {
+            title
+            description
+        }
+    }
+}
+
+query {
+    post(id: 1) {
+        title
+    }
+}
+
+mutation {
+    # create
+    createUser(
+        name: "john doe2"
+        email: "johndoe2@mai.com"
+        password: "johndoe2123"
+    ) {
+        id
+        name
+        email
+    }
+}
+
+mutation {
+    # update
+    updateUser(
+        id: 53
+        name: "update John Doe"
+        email: "updateJohnDoe@mail.com"
+        password: "updatedPassword"
+    ) {
+        id
+        name
+        email
+    }
+}
+
+mutation {
+    # delete
+    deleteUser(id: 1) {
+        name
+    }
+}
+
+mutation {
+    createPost(
+        title: "john doe"
+        description: "kasx9812y9812y89ry1298r y91 y9128dk"
+        user_id: 51
+    ) {
+        id
+        title
+    }
+}
+
+mutation {
+    updatePost(
+        id: 2
+        title: "update2 john doe"
+        description: " updated2 kasx9812y9812y89ry1298r y91 y9128dk"
+    ) {
+        id
+        title
+        description
+    }
+}
+
+mutation {
+    deletePost(id: 1) {
+        title
+        description
+    }
+}
+
+query {
+    # sort + paginate
+    users(orderBy: [{ field: "name", order: ASC }], first: 10) {
+        data {
+            id
+            name
+        }
+    }
+}

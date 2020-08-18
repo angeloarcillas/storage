@@ -1,0 +1,545 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/*********************
+      PREDEFINED
+*********************/
+h2, h3, h4, h5 {
+  font-family: 'Chilanka', cursive;
+}
+
+p {
+  font-family: 'Chilanka', cursive;
+}
+
+span {
+  font-family: 'Chilanka', cursive;
+}
+
+a {
+  text-decoration: none;
+  font-weight: lighter;
+  font-size: .9em;
+  font-family: 'Open Sans', sans-serif;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+input {
+  width: 100%;
+  padding: 1em 1.5em;
+  margin: .5em 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  padding: 1em 2em;
+  letter-spacing: 2px;
+  border-radius: 5%;
+  opacity: .8;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: #4CAF50;
+  color: white;
+  margin: .8em 0;
+  border: none;
+  width: 100%;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.btn-danger {
+  background: #ff0000;
+  width: 15em;
+}
+
+.btn-secondary {
+  background: #3e3e3e;
+  width: 15em;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  padding: 2em;
+}
+
+section {
+  height: 100vh;
+  padding: 1em;
+  position: relative;
+}
+
+/*********************
+        HEADER
+  *********************/
+header {
+  height: 3em;
+  margin-bottom: 2.5em;
+  border-bottom: 1px solid #ababab;
+
+}
+
+.brand-name {
+  font-family: 'Chilanka', cursive;
+  text-transform: uppercase;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+header ul {
+  display: flex;
+  margin-top: 20px;
+}
+
+.nav-link {
+  color: #000;
+  padding: 1em 2em;
+  text-transform: uppercase;
+}
+
+/* header li:nth-last-child(1) a{
+  margin-right: 0;
+} */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+}
+
+/* xl */
+.login {
+  background: #fff;
+  display: block;
+  height: 24.5em;
+  width: 20em;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
+
+/* sm */
+/* .login {
+  background: #fff;
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+} */
+.login form {
+  margin: 0 auto;
+  padding: 2em;
+}
+
+.x-mark {
+  position: absolute;
+  top: 2%;
+  right: 5%;
+  font-size: 2em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.x-mark:hover,
+.x-mark:focus {
+  color: #f00;
+  cursor: pointer;
+}
+
+.login h2 {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: .5em;
+}
+
+.login .btn-danger {
+  float: left;
+  width: 8.5em;
+  margin-left: 1em;
+}
+
+.login .btn-secondary {
+  float: right;
+  width: 8.5em;
+  padding: 1.15em;
+  margin-right: 1em;
+}
+
+/*
+.login .btn-danger {
+  float: left;
+}
+
+.login .btn-secondary {
+  float: right;
+} */
+/*********************
+        MAIN
+  *********************/
+/*********************
+        FOOTER
+  *********************/
+/*********************
+        ANIMATION
+  *********************/
+/* ZOOM IN */
+.zoomIn {
+  -webkit-animation: zoomIn 0.6s;
+  -moz-animation: zoomIn 0.6s;
+  animation: zoomIn 0.6s
+}
+
+@-webkit-keyframes zoomIn {
+  from {
+    -webkit-transform: scale(0)
+  }
+
+  to {
+    -webkit-transform: scale(1)
+  }
+}
+
+@-moz-keyframes zoomIn {
+  from {
+    -moz-transform: scale(0)
+  }
+
+  to {
+    -moz-transform: scale(1)
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
+/* FADE IN */
+.fadeIn {
+  -webkit-animation: fadeIn 1.5s;
+  -moz-animation: fadeIn 1.5s;
+  animation: fadeIn 1.5s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@-moz-keyframes fadeIn {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+/* FADE IN DOWN */
+.fadeInDown {
+  -webkit-animation: fadeInDown .6s;
+  -moz-animation: fadeInDown .6s;
+  animation: fadeInDown .6s;
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-moz-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -moz-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* FADE IN DOWN BIG */
+.fadeInDownBig {
+  -webkit-animation: fadeInDownBig .6s;
+  -moz-animation: fadeInDownBig .6s;
+  animation: fadeInDownBig .6s;
+}
+
+@-webkit-keyframes fadeInDownBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-moz-keyframes fadeInDownBig {
+  from {
+    opacity: 0;
+    -moz-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDownBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* FIXME: ITS FUCKING DONE AND NOW IDK WHAT TO DO SO FIX IT */
+/* Slideshow container */
+.carousel-inner {
+  min-height: 50vh;
+  width: 100%;
+  border: 1px solid #ababab;
+  position: absolute;
+  margin: auto;
+  padding: 1em;
+}
+
+.carousel-item {
+  display: none;
+  margin: auto;
+  position: relative;
+  height: 50vh;
+  min-width: 100%;
+}
+
+.carousel-item img {
+  background: #ababab;
+  vertical-align: middle;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  min-width: 100%;
+}
+
+.carousel-caption {
+  padding: 2em;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.carousel-caption div {
+  background: rgba(0, 0, 0, .4);
+  width: 50%;
+  padding: 2em;
+  margin: 0 auto;
+  color: #3df08f;
+}
+
+.carousel-caption h5 {
+  font-size: 2em;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: .5em;
+  width: 2em;
+  margin: 0 .2em;
+  background-color: #fff;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  border: 1px solid #ababab;
+}
+
+.active {
+  background-color: #3e3e3e;
+}
+
+
+
+footer {
+  height: 50vh;
+  border-top: 1px solid #ababab;
+}
+
+footer .container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer .col {
+  height: 100%;
+  /* height: unset; */
+  width: 33%;
+  /* width: 100%; */
+}
+
+footer h5 {
+  font-size: 1.5em;
+  margin-bottom: .5em;
+}
+.sub-input {
+  font-size: 1em;
+  width: 70%;
+  float: left;
+  padding: .8em 0;
+  padding-left: 1em;
+  margin: 0;
+}
+
+.sub-btn {
+  width: 30%;
+  border-radius: 0%;
+  float: left;
+  padding: 1em 0;
+  margin: 0;
+}
+
+.connect div {
+  padding: .5em;
+  margin-top: 1em;
+  border-bottom: 2px solid #61d086;
+}
+
+.something p {
+  letter-spacing: .05em;
+}
+
+.footer-nav {
+  list-style: none;
+  float: left;
+}
+
+.footer-nav li {
+  padding: .5em;
+  padding-right: 1em;
+}
+.footer-nav li a {
+}
+.col .wrapper:after {
+}
+
+.foot-text {
+border-top: 1px solid #ababab;
+border-bottom: 1px solid #ababab;
+
+}
+.foot-text .container p {
+  padding: .5em;
+}
+.foot-nav {
+  display: flex;
+  justify-content: center;
+}
+.foot-nav span {
+  font-family: 'Open Sans', sans-serif;
+  font-size: .75em;
+  padding: 1em;
+}

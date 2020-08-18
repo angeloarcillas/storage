@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>slot</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js" defer></script>
+  </head>
+
+  <style>
+    body {
+      padding: 10rem;
+    }
+    .tabs ul {
+      display:  flex;
+    }
+
+    .tabs li {
+      margin: 0 10px;
+      list-style: none;
+    }
+    .active {
+      background-color: limegreen;
+    }
+  </style>
+
+  <body>
+    <div id="app">
+      <tabs>
+        <tab name="home" :selected="true">
+          <h2>home page</h2>
+        </tab>
+
+        <tab name="about">
+          <h2>about page</h2>
+        </tab>
+
+        <tab name="contact">
+          <h2>contact page</h2>
+        </tab>
+      </tabs>
+
+    </div>
+  </body>
+</html>

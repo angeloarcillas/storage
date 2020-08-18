@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title></title>
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- add/remove class -->
+      <div
+        v-on:click="available = !available"
+        v-bind:class="{available:available}"
+      >
+        <span>foo</span>
+      </div>
+      <!-- NOTE:: PENDING -->
+      <button v-on:click="nearby = !nearby">nearby</button>
+      <button v-on:click="available = !available">available</button>
+      <div v-bind:class="compClass">
+        <span>Seg</span>
+      </div>
+
+      <!-- condition -->
+      <button v-on:click="error = !error">x</button>
+      <button v-on:click="success = !success">y</button>
+      <!--
+  <p v-if="error">has error</p>
+  <p v-else-if="success">success</p>
+-->
+      <p v-show="error">has error</p>
+      <p v-show="success">success</p>
+
+      <!-- LOOPS -->
+      <div>
+      <ul>
+        <!-- for in loop -->
+        <li v-for="hero in heros">{{ hero }}</li>
+      </ul>
+      <!-- array index -->
+      <ul>
+        <li v-for="(ninja, index) in ninjas">{{ index + 1 }}. {{ ninja.name }} - {{ ninja.age }}</li>
+      </ul>
+      <!--template - loop inner element -->
+      <template v-for="ninja in ninjas">
+        <h3>{{ ninja.name }}</h3>
+        <p>{{ ninja.age }}</p>
+      </template>
+
+      <template v-for="ninja in ninjas">
+        <div v-for="(value, key) in ninja">
+          <p>{{ key }} - {{ value }}</p>
+        </div>
+      </template>
+    </div>
+
+    </div>
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          available: false,
+          nearby: false,
+          error: false,
+          success: false,
+          name: "foo",
+          hero: ["foo", "bar", "foofoo"],
+          ninja: [
+            { name: "one", age: 123 },
+            { name: "two", age: 124 },
+            { name: "three", age: 125 },
+          ],
+        },
+        computed: {
+          compClass: function () {
+            return {
+              available: this.available,
+              nearby: this.nearby,
+            };
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

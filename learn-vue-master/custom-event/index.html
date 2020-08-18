@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>custom event</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="main.js" defer></script>
+</head>
+
+<style> .none { display: none }</style>
+<body>
+  <div id="app">
+    <modal v-if="showModal" title="Lorem Ipsum" body="Lorem ipsum dolor sit amet, consectetur adipisicing elit." @close="showModal = false"></modal>
+    <button @click="showModal = true">Show modal</button>
+  </div>
+</body>
+</html>

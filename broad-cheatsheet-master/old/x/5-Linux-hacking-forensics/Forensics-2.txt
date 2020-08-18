@@ -1,0 +1,83 @@
+# Forensics
+
+## data acquisition
+-extract information and create a copy
+-court of law
+-types:live and static
+
+## live acquisition
+-volatile data (ram,temp)
+-powered on(locked/sleep mode)
+-encrypted drive(passphrase/pwd)
+ 
+ ## static acquisition
+ -non-volatile data(swap file,slack space,usb,etc)
+ -power off
+ -police seizure
+ 
+ ## volatile data collection
+ -plan
+ -establish trusted command shell
+ -transmission/storage method
+ -ensure integrity (hashing)
+ -record date,time,command history
+ -document
+ -report
+ 
+ ## media sanitization
+ -NIST SP800-88
+ -clear/purge/destroy
+ 
+ ## data acquisition format
+ -raw
+    -creates simple,sequential,flat files of suspect drive/data set
+ -proprietary
+    -split image into smaller segments for archive
+ -aff -advanced forensic format
+    -produces compressed/uncompressed image files
+    
+## disk-to-image
+-bit to bit replication
+-most common used tools
+    -ProDiscover,Encase,sleuth skit,x-ways forensics,etc..
+    
+## disk-to-disk
+-older software/hardware
+-used tools
+    -EnCase,x-ways forensics
+    
+## logical acquisition
+-specific files or filetypes
+-email:collecting only .pst and .ost
+-RAID:only specific records
+-E-discovery
+
+## sparse acquisition
+-collects fragments of unallocated data
+
+## dd
+-linux
+-data dump
+-drive doesn`t have to be mounted
+-raw format
+-target drive needs to be larger than suspect
+-less user-friendly
+-data management
+
+## dcfldd
+-specify hexadecimal patterns/text for clearing disk space
+-log errors
+-hashing:md5,sha1,sha-256,sha-512
+-split data acquisition into segmented volumes with numeric extensions
+-verify acquired data with original disk
+
+## tools
+-drivespy
+-prodiscover forensics
+-accessdata ftk imager
+-safeback
+-f-response
+-deapspar
+
+
+

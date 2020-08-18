@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content"description">
+  <meta name="author" content"Evangel Laclairs">
+  <link rel="shortcut icon" type="image/png" href="assets/img/logo.png">
+  <meta name="rating" content="general">
+  <meta name="google" content="nositelinkssearchbox" />
+  <meta name="google" content="notranslate" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Evangel Laclairs - Freelance Web Developer</title>
+  <link rel="stylesheet" href="assets/css/reset-style.css">
+  <link rel="stylesheet" href="assets/css/predefined-style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/sidebar.js" defer></script>
+</head>
+
+<body>
+  <div class="loader">
+    <div class="loader-img">loading...</div>
+  </div>
+  <header> <span class="brand">Evangel Laclairs</span> <span class="menu" onclick="showSideNav()"> ☰</span>
+    <aside class="modal clearfix">
+      <div class="sidebar">
+        <div class="sidebar-top">
+          <h3>Evangel</h3> <span class="close" onclick="hideSideNav()">&times;</span>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#intro" onclick="hideSideNav()">Intro</a></li>
+            <li><a href="#service" onclick="hideSideNav()">Service</a></li>
+            <li><a href="#work" onclick="hideSideNav()">Work</a></li>
+            <li><a href="#contact" onclick="hideSideNav()">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="social"> <a href="">M</a> <a href="">M</a> <a href="">M</a> <a href="">M</a> </div>
+      </div>
+    </aside>
+    </div>
+  </header>
+  <main>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#intro" class="intro dot" onclick="currentSlide(1)">Home</a></li>
+        <li><a href="#service" class="service dot" onclick="currentSlide(2)">Service</a></li>
+        <li><a href="#work" class="work dot" onclick="currentSlide(3)">Work</a></li>
+        <li><a href="#contact" class="contact dot" onclick="currentSlide(4)">Contact</a></li>
+      </ul>
+    </nav>
+    <section id="intro" class="mySlides clearfix">
+      <h2>Intro</h2>
+      <div class="left">
+        <div class="container">
+          <p>Nam ut ligula semper, elementum magna eu, finibus arcu. Nulla vestibulum finibus orci non malesuada. Donec ac ligula non orci convallis ullamcorper ac ac libero. Nam eget dignissim massa. Mauris nibh nunc, efficitur eget ornare non,
+            fermentum vel velit. Donec consequat porta ligula eu molestie. Praesent convallis blandit laoreet. Vivamus eu lectus eu ex rutrum ultrices. Quisque gravida efficitur ligula ac imperdiet. Sed eu orci elementum ipsum facilisis finibus
+            placerat in massa. </p>
+          <div class="btn-group"> <button class="btn">Download Resume</button> <button class="btn">About Me</button> </div>
+        </div>
+      </div>
+      <div class="right"> <img src="assets/img/intro.svg" alt=""> </div>
+    </section>
+    <section id="service" class="clearfix mySlides">
+      <h2>Service</h2>
+      <div class="left">
+        <p>HTML</p>
+        <div class="container">
+          <div class="skill-text html">85%</div>
+        </div>
+        <p>CSS - Sass, Bootstrap, Tailwind</p>
+        <div class="container">
+          <div class="skill-text css">80%</div>
+        </div>
+        <p>JavaScript - jQuery, Vuejs</p>
+        <div class="container">
+          <div class="skill-text js">65%</div>
+        </div>
+        <p>PHP - Laravel, WordPress</p>
+        <div class="container">
+          <div class="skill-text php">90%</div>
+        </div>
+        <p>SQL - MySQL, Sqlite, MongoDB </p>
+        <div class="container">
+          <div class="skill-text sql">75%</div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="img-container"> <img src="assets/img/service.svg" alt=""> </div>
+        <div class="row">
+          <div class="card">
+            <h3>11+</h3>
+            <p>Partners</p>
+          </div>
+          <div class="card">
+            <h3>55+</h3>
+            <p>Projects</p>
+          </div>
+          <div class="card">
+            <h3>100+</h3>
+            <p>Happy Clients</p>
+          </div>
+          <div class="card">
+            <h3>100+</h3>
+            <p>Meetings</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="work" class="mySlides">
+      <h2>Works</h2> <span class="scroll-down">Scroll Down&raquo;</span>
+      <div class="container">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="rectangle"></div>
+        <div class="rectangle"></div><button class="btn">MORE</button>
+      </div>
+    </section>
+    <section id="contact" class="clearfix mySlides">
+      <h2>Contact Us!</h2>
+      <div class="left">
+        <div class="social"> </div>
+      </div>
+      <div class="right">
+        <form> <input type="text" placeholder="E-mail"> <input type="text" placeholder="Subject"> <textarea name="name" rows="5" placeholder="Message.."></textarea> <button class="btn">Send</button> </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="box company">
+        <h3>Company</h3>
+        <p>Vivamus vitae rhoncus mi. Nunc vehicula nunc vel diam fermentum varius quis nec risus. Vestibulum tellus dui, iaculis id porta vitae, ultrices et ex. Vivamus tristique scelerisque ante, ut luctus metus eleifend eget. Vivamus sed feugiat
+          massa.</p>
+      </div>
+      <div class="box navigator">
+        <h3>Lipsum</h3>
+        <ul>
+          <li><a href="#">Praesent</a> </li>
+          <li><a href="#">nulla</a> </li>
+          <li><a href="#">pretium</a> </li>
+          <li><a href="#">egestas</a> </li>
+          <li><a href="#">condimentum</a> </li>
+          <li><a href="#">Ut dictum</a> </li>
+        </ul>
+      </div>
+      <div class="box connect">
+        <h3>Get in touch</h3>
+        <p>Aenean accumsan metus a hendrerit elementum. Vivamus sed feugiat massa.</p>
+        <div class="btn-group clearfix"> <input type="text" placeholder="E-Mail"> <button>SIGNUP</button> </div>
+        <div class="social"> <a href="">M</a> <a href="">M</a> <a href="">M</a> </div>
+      </div>
+      <div class="footer-connect-section"> <span class="footer-overlap footer-connect">COLLABORATE with US</span> <span class="footer-overlap"> <a href="#" class="footer-legal-link">Terms</a><span> &</span><a class="footer-legal-link"
+            href="#">Privacy</a> </span> </div>
+    </div>
+    <p class="legal">Copyright &copy; 2019 Copyright Holder All Rights Reserved. | Designed By: <a href="#"><strong>Evangel Laclars</strong> </a> </p>
+  </footer>
+  <script defer>
+    document.onreadystatechange = function() {
+      if (document.readyState === "complete") {
+        document.querySelector('.loader').style.display = "none";
+        if (screen.width > 1223) {
+          let element = document.createElement("script");
+          element.src = "assets/js/main.js";
+          document.body.appendChild(element);
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

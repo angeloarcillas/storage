@@ -1,0 +1,40 @@
+<!-- get/set DOM -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <title></title>
+  </head>
+  <body>
+    <p class="test1">zxczxczxczxc</p>
+    <p class="test2"><b>lasadasdasdasd</b></p>
+    <input type="text" name="" value="" class="test3">
+    <button class="btn1" type="button" name="button">Text</button>
+    <button class="btn2" type="button" name="button">Html</button>
+    <button class="btn3" type="button" name="button">Input</button>
+  </body>
+  <script>
+
+    $(document).ready(function(){
+
+      $('.btn1').click(function(){
+        //alert($('.test1').text()); -> show .test1 content as text in alert
+        $('.test1').text("this is a new text"); //-> change .test1 text
+      })
+
+      $('.btn2').click(function(){
+        //alert($('.test2').html()); -> show .test2 content as html in alert
+          $('.test2').html("<i>this is a new text</i>");//-> change .test2 html
+      })
+
+      $('.btn3').click(function(){
+      //  alert($('.test3').val()); -> show .test3 value as text in alert
+        $('.test3').val("new input"); //-> change .text3 value
+      })
+    });
+  </script>
+</html>

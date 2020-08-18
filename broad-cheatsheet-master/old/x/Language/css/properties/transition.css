@@ -1,0 +1,57 @@
+ div{
+  display: inline-block;
+  width: 8em;
+  height: 8em;
+  background: #d60a0a;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+/* ease - slow start,then fast, end slow */
+.ease {
+  transition: all 2s ease;
+}
+.ease:hover {
+  width: 15em;
+}
+
+/* ease-in - slow start */
+.ease-in {
+  transition: all 2s ease-in;
+}
+.ease-in:hover {
+  width: 15em;
+}
+
+/* ease-out - slow end */
+.ease-out {
+  width: 15em;
+  transition: all 2s ease-out;
+}
+.ease-out:hover {
+  width: 8em;
+}
+
+/* ease-in-out - slow start and end */
+.ease-in-out {
+  transition: all 2s ease-in-out;
+}
+.ease-in-out:hover {
+  width: 15em;
+}
+
+/* linear - same speed */
+.linear {
+  transition: all 2s linear;
+}
+.linear:hover {
+  width: 15em;
+}
+
+/* cubic-bezier(n,n,n,n) - custom speed */
+.cubic-bezier {
+  transition: all 2s cubic-bezier(0.1, 0.5, 1.0, 0.1) ;
+}
+.cubic-bezier:hover {
+  width: 15em;
+}

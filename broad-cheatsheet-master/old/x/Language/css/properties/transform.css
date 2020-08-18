@@ -1,0 +1,75 @@
+.parent {
+  display: flex;
+  height: 100px;
+  width: 100px;
+  margin-right: 75px;
+}
+
+
+/* ********************
+      TRANFORM 2D
+*********************/
+.translate {
+  /* translate(x-axis,y-axis) */
+  transform: translate(50%, 50%);
+  border: 1px solid #a1e1e1;
+}
+
+.rotate {
+  /* rotate(degree) */
+  transform: rotate(20deg);
+  border: 1px solid #e1a1e1;
+}
+
+.skew {
+  /* scale(x-axis,y-axis) */
+  transform: skew(20deg, 10deg);
+  border: 1px solid #e1a1a1;
+}
+
+.scale {
+  /* scale(x-axis,y-axis) */
+  transform: scale(2, 1);
+  border: 1px solid #e1e1a1;
+}
+
+/* ********************
+      TRANFORM 3D - use perspective()
+*********************/
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate3d */
+.translate3d {
+  transform: perspective(500px) translate3d(15px, 5px, -50px);
+  border: 1px solid #0035ed;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale3d */
+.scale3d {
+  transform: perspective(500px) scale3d(2, 0.7, 0.2) translateZ(100px);
+  border: 1px solid #ffdd4b;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate3d */
+.rotate3d {
+  transform: rotate3d(2, -1, -1, -0.2turn);
+  border: 1px solid #ffdd4b;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translateZ */
+.translatez {
+  transform: perspective(500px) translateZ(-9.7rem);
+  border: 1px solid #635517;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotateZ */
+.rotatez {
+  transform: rotateZ(20deg);
+  border: 1px solid #115753;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scaleZ */
+.scalez {
+  transform: perspective(400px) scaleZ(2) translateZ(-100px);
+  border: 1px solid #00ffc2;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d */

@@ -1,0 +1,38 @@
+# more here: https://lighthouse-php.com
+# scalar == data types
+
+# FETCH
+@all - fetch all eloquent model as collection
+@eq - eloquent query
+@find - Find a model based on the arguments provided.
+# AUTH
+@auth - return auth user
+@bcrypt - run bcrypt
+@can - use laravel policy
+
+# ELOQUENT RELATIONSHIP
+@belongsTo - eloquent relationship
+@belongsToMany
+
+# DATABASE
+@builder - modify query builder
+
+# CACHE
+@cache - cache the result of resolver
+@cacheKey - specify the cache key
+
+@count - laravel count
+
+# MUTATION
+@create
+@update
+@delete
+@upset - update or create
+@restore - restore from trash?
+
+# OTHER
+@rename - make an alias
+@with - Eager-load an Eloquent relation.
+@trim - trim function
+@spread - merge field of nested input
+@rules - laravel validation

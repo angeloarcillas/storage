@@ -1,0 +1,101 @@
+% // placeholder selector => @extend %<name>    
+& // parent selector
+#{args} // interpolation
+
+
+/**
+ * OPERATOR-PRECEDENCE
+ */
+- () => overide precedence
+1. unary operators not, +, -, and /.
+2. *, /, and % operators.
+3. + and - operators.
+4. >, >=, < and <= operators.
+5. == and != operators.
+6. and operator.
+7. or operator.
+8. = operator, when it’s available.
+
+
+/**
+ * @
+ */
+@use // loads mixins, functions, and variables from other Sass stylesheets, and combines CSS from multiple stylesheets together.
+@import // extends the CSS at-rule to load styles, mixins, functions, and variables from other stylesheets.
+@function // defines custom functions that can be used in SassScript expressions.
+@mixin and @include // makes it easy re-use chunks of styles.
+@extend // allows selectors to inherit styles from one another.
+@forward // loads a Sass stylesheet and makes its mixins, functions, and variables available when your stylesheet is loaded with the @use rule.
+
+@at-root // puts styles within it at the root of the CSS document.
+@media
+@font-face
+
+/* debug mode */
+@error // causes compilation to fail with an error message.
+@warn // prints a warning without stopping compilation entirely.
+@debug // prints a message for debugging purposes.
+
+/* flow control */
+@if
+@each
+@for
+@while
+
+$var // declare variable
+
+/* EXPRESSIONS */
+==, != <, <=, >, and >=// comparison
+(), +, -, *, /, and % // math
+and, or, and not //logical operator. Sass considers every value “true” except for false and null.
++, -, and / // concat string
+
+
+// NESTING
+nav {
+  ul {
+  list-style: none;
+  }
+  li {
+  display: inline-block;
+  }
+  a {
+  text-decoration: none;
+  }
+} // nav > ul,nav > li and nav > a
+
+
+// PARTIAL - _base.scss
+$primary-color: blue;
+
+body {
+color: $primary-color;
+}
+
+// OTHER FILE
+@use 'base';
+
+.inverse {
+  background-color: base.$primary-color;
+}
+
+@mixin transform($property) {
+  transform: $property;
+}
+
+.box {
+  @include transform(rotate(30deg));
+}
+
+// @extend + %(placeholder)
+%message-shared {
+color: #333;
+}
+// This CSS won't print because %equal-heights is never extended.
+%equal-heights {
+display: flex;
+}
+
+.message {
+@extend %message-shared; // == color: #333;
+}

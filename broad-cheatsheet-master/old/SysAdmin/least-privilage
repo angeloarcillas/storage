@@ -1,0 +1,21 @@
+The “principle of least privilege” states that every user or process within a a system should operate using the least amount of privilege necessary to undertake their job. This helps mitigate any risks if a component is compromised or an individual goes rogue.
+
+Applying the principle to technology stacks means:
+
+    Running web-server processes as non-root users, and restricting the directories they can access on disk, and what they can do there.
+
+    Opening firewall ports only when necessary.
+
+    Limiting access to databases, and requiring processes that connect to databases to run under named accounts with limited permissions.
+
+    Provisioning services only when necessary, rather than making them accessible in an ad-hoc manner.
+
+The principle can be applied to personnel too. You should:
+
+    Restrict access to production systems – ensure that access is only available under named accounts and for limited windows of time.
+
+    Have clearly defined roles and release processes, so access can be restricted in a meaningful way.
+
+    Ensure that data used in test systems is scrubbed of any sensitive information.
+
+    Ensure that credentials for your key systems are known only by those who require it for their job function, and that these credentials are rotated frequently

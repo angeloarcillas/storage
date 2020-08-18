@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Card
+   ========================================================================== */
+
+   .card {
+     position: relative;
+    display: block;
+    border: 1px solid #eee;
+    border-radius: .25rem;
+    word-wrap: break-word;
+    box-shadow: 0 5px 10px rgba(9,9,16,.15);
+  }
+  
+  .card-header,
+  .card-body,
+  .card-footer {
+    padding: 1rem 2rem;
+  }
+  
+  .card-header {
+    border-bottom: 1px solid #dfdfdf;
+    background: #f7f7f7;
+  }
+  
+  .card-footer {
+    padding: 1rem 2rem;
+    border-top: 1px solid #dfdfdf;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+  }
+  
+  .card-text:last-child {
+    margin-bottom: 0;
+  }

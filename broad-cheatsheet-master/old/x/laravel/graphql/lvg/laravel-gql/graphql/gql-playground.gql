@@ -1,0 +1,105 @@
+# query {
+#   books {
+#     id
+#     title
+#     author
+#   }
+# }
+
+# query {
+#   book(id:1) {
+#     id
+#     title
+#     author
+#     category{
+#       name
+#     }
+#   }
+# }
+
+
+# query {
+#   categories {
+#   name
+#   }
+# }
+
+# query {
+#   category(id:5) {
+#     id
+#   name
+#     books {
+#       id
+#       title
+#       author
+#     }
+#   }
+# }
+
+# query{
+#   booksByFeatured(featured:true) {
+#     title
+#   }
+# }
+
+# query {
+#   complexQuery(search:"a") {
+#     title
+#   }
+# }
+
+# mutation {
+#   createCategory(name:"sample"){
+#     id
+#     name
+#   }
+# }
+
+# mutation {
+#   updateCategory(id: 12,name:"updated category"){
+#     id
+#     name
+#   }
+# }
+
+# mutation {
+#   deleteCategory(id: 11){
+#     id
+#   }
+# }
+
+# mutation {
+#   createBook(
+#     title:"Book Title"
+#     author:"Book Author"
+#     category: 5
+#   ){
+#     id
+#   	title
+#     author
+#   }
+# }
+
+# mutation {
+#   updateBook(
+#     id: 11,
+#     title:"Book Title",
+#     author:"Book Author",
+#     category: 9
+#   ){
+#     id
+#   	title
+#     author
+#   }
+# }
+
+# mutation {
+#   deleteBook(
+#     id: 14
+#   ){
+#     id
+#   	title
+#     author
+#   }
+# }
+

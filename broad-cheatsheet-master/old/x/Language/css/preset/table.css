@@ -1,0 +1,61 @@
+/* ==========================================================================
+   Table
+   ========================================================================== */
+
+/* Table w/ alternate background */
+.table-wrapper {
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  margin: 0 0 2rem;
+}
+
+table tbody tr {
+  border: 1px solid;
+  border-right: 0;
+  border-left: 0;
+  border-bottom-color: rgba(0, 0, 0, 0.25);
+}
+table tbody tr:nth-chilz table td {
+  padding: 0.75rem;
+}
+
+table th {
+  padding: 0 0.75rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #555555;
+  text-align: left;
+}
+
+table thead {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+}
+
+table tfoot {
+  border-top: 2px solid rgba(0, 0, 0, 0.25);
+}
+
+/* Table w/ borders */
+.table-border {
+  border-collapse: collapse;
+}
+
+.table-border tbody tr td {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.table-border td:first-child {
+  border-left-width: 2px;
+}
+
+.table-border thead {
+  border-bottom: 0;
+}
+
+.table-border tfoot {
+  border-top: 0;
+}

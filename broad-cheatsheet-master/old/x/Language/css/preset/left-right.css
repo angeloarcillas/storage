@@ -1,0 +1,19 @@
+.clearfix::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.left {
+  top: 0.25rem;
+  float: left;
+  max-width: 40%;
+  margin: 0 1.5rem 1rem 0;
+}
+
+.right {
+  top: 0.25rem;
+  float: right;
+  max-width: 40%;
+  margin: 0 0 1rem 1.5rem;
+}

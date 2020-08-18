@@ -1,0 +1,76 @@
+/* ==========================================================================
+   Preset
+   ========================================================================== */
+
+/* Set box sizing model */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+/* Remove spaces, border and other extra visuals */
+
+html,
+body {
+  padding: none;
+  border: none;
+  margin: none;
+  outline: none;
+
+  vertical-align: baseline;
+}
+
+/** Set responsive font size */
+
+html {
+  font-size: 11pt;
+}
+/* html {
+  font-size: 13pt;
+} */
+
+
+@media screen and (max-width: 768) {
+  html {
+    font-size: 12pt;
+  }
+}
+
+@media screen and (max-width: 1024) {
+  html {
+    font-size: 13pt;
+  }
+}
+
+/* Preset body */
+
+body {
+  min-width: 100%;
+  max-width: 1824px;
+  font-family: 'Open Sans', sans-serif;
+
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.15;
+  color: #111;
+
+  background: #fff;
+
+  overflow-x: hidden;
+  -ms-overflow-style: scrollbar;
+}
+
+/* Remove animation & transition before page loads */
+
+body.is-preload *,
+body.is-preload *:before,
+body.is-preload *:after {
+  animation: none !important;
+  transition: none !important;
+}

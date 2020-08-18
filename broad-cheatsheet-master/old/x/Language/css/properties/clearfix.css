@@ -1,0 +1,25 @@
+/*
+  CLEARFIX
+ */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*
+  MICRO CLEARFIX
+ */
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}

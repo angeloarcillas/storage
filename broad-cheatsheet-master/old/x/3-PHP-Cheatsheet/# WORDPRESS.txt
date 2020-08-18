@@ -1,0 +1,35 @@
+#WORDPRESS
+
+##HEAD
+language_attributes() -> set lng attr
+bloginfo('charset') -> set charset
+bloginfo('name') -> set site name
+wp_head() -> dynamic HEAD
+
+BODY
+get_header(); -> get header file
+
+home_url() -> go homepage
+bloginfo('name') -> set site name
+bloginfo('description') -> set site description
+have_posts() -> if site has post
+the_post() -> site posts
+the_permalink() -> individual posts link
+the_title() -> post title
+the_content() -> post content
+get_footer(); -> get footer file
+
+FOOTER
+wp_footer() -> dynamic FOOTER
+
+$args = array('theme_location' => 'primary' ) -> var for menu location
+wp_nav_menu($args) -> set navbar
+
+FUNCTIONS
+wp_enqueue_style('file-name [NO . CSS] ', get_stylesheet_uri() -> link stylesheet;
+add_action('wp_enqueue_scripts','function-name') -> add function-name to queue?
+
+register_nav_menus(array(  -> function to set navbar
+  'primary' => __('primary menu'),
+  'footer' => __('footer menu'),
+));

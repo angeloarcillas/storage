@@ -1,0 +1,64 @@
+Linux Command
+ls -> list directory
+cd -> change directory
+pwd -> show working directory
+mkdir -> make directory
+touch -> make file
+rmdir -> remove directory
+rm - > remove file
+rm -r -> recursive remove // -r -> recursive
+grep -> grab?
+tee [file] -> copy to file and show on CLI?
+cd /root -> access root files
+which [APP] -> show app location
+find -> find item
+tar -xvf [filename] -> unzip tar file
+unzip [filename] -> unzip zip file
+su [user] -> switch user
+su -> switch  to root
+sudo -> super user do -> grants root permission
+usermod -aG sudo username-> add user to group sudo
+chmod -> change file/user mode
+
+APT - application - debian package manager
+apt -> new
+apt-get -> old version
+apt install
+apt update
+apt upgrade
+apt remove -> remove app but settings stay
+apt purge -> remove everything
+apt-cache policy [APP] -> version details
+
+
+SERVICE
+service [APP] start
+service [APP] restart
+service [APP] stop
+
+systemctl start [APP] -> system control
+systemctl status [APP]
+systemctl restart [APP]
+systemctl stop [APP]
+
+sysclt -> sys control?
+
+NETSTAT - network status
+netstat -tupln -> check tor
+nohup tor & -> run tor
+
+MACCHANGER - mac address changer
+macchanger -> change DNS
+
+
+FIND
+find [path] [option] [item-to-find]
+. (dot) -> corrunt directory
+find . -type f -name "*.php" -> show all .php file (case sensitive)
+find . -type f -iname "*.php" -> show all .php file (not case sensitive)
+find . -type f -not -iname "*.php" -> show all none .php file
+find . -type f -iname "*.php" -exec grep -i -n "function" {] + -> find and grep -> try |
+
+
+# Arch
+pacman -Syyu update and upgrade all

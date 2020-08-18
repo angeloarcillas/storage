@@ -1,0 +1,19 @@
+ETI - Enterprise Theory of Investigation
+FISMA - federal information security management act
+GLBA - gramm-leach-bliley act
+HIPAA - health insurance portability and accountability act
+SOX - sarbanes-oxley act
+PCI-DSS - payment card industry data security standard
+SWGDE - scientific working group on digital evidence
+
+hard disk interfaces
+SATA - serial AT attachment
+PATA - parallel AT attachment
+SCSI - small computer system interface
+
+GUID - globally unique identifier
+GPT - GUID partition table
+
+UEFI - unified extensible firmware interface
+apt-cache search [name]* -> search for package
+apt-cache policy [name] -> search for package in repo

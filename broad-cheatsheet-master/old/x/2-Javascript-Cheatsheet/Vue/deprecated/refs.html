@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title></title>
+  </head>
+  <body>
+
+    <div id="app">
+      <h2>refs</h2>
+      <input type="text" ref="input" />
+      <button v-on:click="getRefs">submit</button>
+
+      <p>fav: {{output}}</p>
+
+      <div ref="test" style="display: none;">
+        {{ text }}
+      </div>
+    </div>
+
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          output: "foo",
+          text: "success",
+        },
+        methods: {
+          getRefs: function () {
+            this.output = this.$refs.input.value;
+            alert(this.$refs.test.innerText);
+          },
+        },
+      });
+    </script>
+
+  </body>
+</html>

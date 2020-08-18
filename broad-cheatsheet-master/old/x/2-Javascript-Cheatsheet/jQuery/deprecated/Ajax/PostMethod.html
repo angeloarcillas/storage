@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <title>POST Method</title>
+</head>
+
+<body>
+  <input type="text" name="name">
+  <p class="info"></p>
+
+</body>
+
+<script>
+  $(document).ready(function() {
+    $('input').keyup(function() {
+      //pass value of input
+      let name = $('input').val();
+      //Ajax post method
+      $.post("postInfo.php", {
+        //pass value of jquery
+        suggestion: name
+      }, function(data) {
+        //insert data to .info /[<p></p>]
+        $('.info').html(data);
+      });
+    });
+  });
+</script>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <title>GET Method</title>
+</head>
+
+<body>
+  <button class="btn">click to get data</button>
+  <p id="datas"></p>
+</body>
+<script>
+  $(document).ready(function() {
+
+    $('button').click(function() {
+      //ajax get method ("url", sfunction)
+      $.get("getInfo.txt", function(data, status) { //-> data = content of file && status = for alert
+        //insert data to #datas /[<p></p>]
+        $('#datas').html(data);
+
+        alert(status);
+      })
+    });
+  });
+</script>
+
+</html>

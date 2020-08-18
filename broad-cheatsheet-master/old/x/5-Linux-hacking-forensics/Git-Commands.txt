@@ -1,0 +1,78 @@
+GIT COMMAND
+
+BASIC COMMANDS
+git init // initialize git
+git status // show git status
+git add (filename.extention) // add file to git
+git commit -m "comment" // commit changes
+git pull (url) // pull request to avoid error
+git push -u origin master // add file to github
+git clone (url) // clone repository
+git clone --depth 1 // clone latest
+git clone -b master-cn (url) --single-branch //clone specific branch
+git mv file new-file //rename file
+git mv file path/file //move file
+git mv -f file new-file //force move file
+git rm file
+
+
+BRANCH
+git branch -a //list all branch
+git branch (branch-name) // create branch
+git branch -m (branch-name) (new-branch-name) // rename branch
+git branch -d (branch-name) // -d // delete branch
+git branch (branch-name) --edit-description //edit branch desc
+git checkout (branch-name) // move to other branch
+git checkout -b (new-branch) //create then switch to new branch
+git merge (branch-name) //Merge the specified branch into the current
+git merge --no-ff branchName //Always generate a merge commit when merging
+
+DIFF
+git diff //Show difference between your working dir and the index
+git diff --cached // index & most recent commit
+git diff HEAD // working dir & most recent commit
+
+LOG
+git log //Show all commits
+git log --oneline //Show only commit message & ref
+git log --merges //Show merge commits only
+git log --graph //Show all commits represented by an ASCII graph
+
+TAG
+git tag // list tags
+git tag -a v1.0 -m 'version 1.0' // create tag
+git show v1.0 // show info about tag
+git push origin v1.0 // single push tag
+git push origin --tags // multi push tags
+
+CONFIGURE
+git config --global user.name "github username"
+git config --global user.email "github email"
+
+IGNORE FILES
+echo "temp/" >> .gitignore
+echo "private_key" >> .gitignore
+
+OTHERS
+git stash //Stashing takes the dirty state of your working directory and saves it on a stack of unfinished changes that you can reapply at any time.
+git stash list //list stash?
+git stash pop //remove?
+git rebase master other-branch //rebase?
+git reset //reset staging area
+git reset --hard //override
+git reset 31f2bb1 //Moves the current branch tip to the specified commit (leaves dir unchanged)
+git reset --hard 31f2bb1 //override
+git revert <commit> //revert specific commit
+
+======CREATE REPO USING CLI=======
+
+echo "# backup" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/angeloarcillas/backup.git
+git push -u origin master
+
+==========PUSH EXISTING REPO========
+git remote add origin https://github.com/angeloarcillas/backup.git
+git push -u origin master

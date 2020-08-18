@@ -1,0 +1,162 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  transition: all .3s;
+}
+
+html {
+  font: inherit;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+body {
+  font-size: 1rem;
+  outline: none;
+  overflow-x: hidden;
+  background: #fff no-repeat center center fixed;
+  background-size: cover;
+  min-width: 100%;
+}
+
+/************************ Typography ***********************/
+h2 {
+  display: block;
+  font-size: 1.7em;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0.67em 0;
+}
+
+h3 {
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-variant: small-caps;
+  margin: 0.83em 0;
+}
+
+h4 {
+  display: block;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin: 1em 0;
+}
+
+h5 {
+  display: block;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin: 1.33em 0;
+}
+
+h6 {
+  display: block;
+  font-size: .9em;
+  font-weight: bold;
+  margin: 1.67em 0;
+}
+
+p {
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: .7em;
+  margin: .5em 0;
+  letter-spacing: .1em;
+  line-height: 1.5em;
+}
+
+a {
+  font-family: 'Black Ops One', cursive;
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+textarea {
+  min-width: 100%;
+  max-width: 100%;
+  overflow-y: hidden;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.btn {
+  font-family: 'Black Ops One', cursive;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1em;
+  color: #141414;
+  padding: .5em 1em;
+  margin: 0.83em 0;
+  border: none;
+  cursor: pointer;
+  border: 1px solid #536dfe;
+  background-color: #141414;
+  color: #536dfe;
+}
+
+.left {
+  width: 100%;
+}
+
+.right {
+  width: 100%;
+}
+
+@media only screen and (min-width: 1224px) {
+  footer {
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .btn:hover {
+    /* opacity: .7; */
+    transform: translateY(-.3em);
+    color: #c4c4c4 !important;
+    box-shadow: 0 0 10px #536dfe;
+  }
+
+  .container {
+    max-width: 85%;
+    margin: 0 auto;
+  }
+
+  .left {
+    width: 50%;
+    float: left;
+  }
+
+  .right {
+    width: 50%;
+    float: left;
+  }
+}

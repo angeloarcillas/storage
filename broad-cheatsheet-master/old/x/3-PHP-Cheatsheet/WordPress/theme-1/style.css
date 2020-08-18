@@ -1,0 +1,51 @@
+/* needed for wp to know the theme
+Theme Name: myTheme
+Author: Evangel
+Author URI: http://programmer4hire.com
+Version: 1.0
+*/
+
+body {
+  font-family: Arial, sans-serif;
+font-size: 14px;
+color: #333;
+}
+a:link, a:visited {
+  color: #3c3c3c;
+}
+p {
+  line-height: 1.65em;
+}
+
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+article.post{
+  border-bottom: 200px dotted #bbbbbb;
+}
+article.post:last-of-type {
+  border-bottom: none;
+}
+
+.site-header {
+  border-bottom: 2px solid #999;
+}
+.site-footer {
+    border-top: 2px solid #999;
+}
+/*
+.current-menu-item -> add class => active link
+*/
+.site-nav ul {
+  margin: 0;
+  padding: 0;
+}
+.site-nav ul li {
+  list-style: none;
+  float: left;
+}
+.site-nav ul li a {
+
+}

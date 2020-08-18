@@ -1,0 +1,59 @@
+*,*::before,*::after {
+  box-sizing:border-box;
+}
+
+/*
+.container {
+  width: 85%;
+  margin: 0 auto;
+}*/
+
+.wrapper {
+  padding: 2em;
+
+}
+section {
+  margin-bottom: 2em;
+  height: 100%;
+  padding-top: 3em;
+  background: gray;
+  border-top: 1px solid orange;
+}
+
+header {
+  height: 20vh;
+  border-bottom: 1px solid gray;
+}
+h1 {
+  display: block;
+  border:1px solid red;
+}
+.test {
+  background: #e1e1e1;
+}
+
+footer {
+  height: 80vh;
+  background: #000;
+  color: #fff;
+}
+
+footer ul li {
+list-style:none;
+}
+footer a {
+  color: #fff;
+}
+footer a:hover {
+color: #54c790;
+text-decoration: underline;
+}
+footer .fa-heart {
+  padding: .3em;
+  margin-right: .2em;
+  font-size: 2.5em;
+  cursor: pointer;
+}
+footer .fa-heart:hover {
+color: #54c790;
+}
