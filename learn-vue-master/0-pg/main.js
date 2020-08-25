@@ -3,27 +3,27 @@
 
 window.Event = new Vue();
 
-Vue.component('coupon',{
+Vue.component("coupon", {
   template: `
   <input placeholder="enter coupon code" @blur="onCouponApplied">
   `,
   methods: {
-    onCouponApplied(){
-      Event.$emit('applied');
-        }
-  }
-})
+    onCouponApplied() {
+      Event.$emit("applied");
+    },
+  },
+});
 
 new Vue({
   el: "#app",
   methods: {
-    onCouponApplied(){
-      alert("It was applied")
-    }
+    onCouponApplied() {
+      alert("It was applied");
+    },
   },
   created() {
-    Event.$on('applied', () => {
-      alert("success")
-    })
-  }
-})
+    Event.$on("applied", () => {
+      alert("success");
+    });
+  },
+});

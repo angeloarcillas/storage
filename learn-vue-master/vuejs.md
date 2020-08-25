@@ -29,6 +29,7 @@ v-text="post.body"      # same as {{ post.body }}
 ```
 
 ## events
+
 ```cs
 v-on:[event]            # event listener; @[event] shorthand
 
@@ -37,37 +38,102 @@ v-on[customEvent]       #  create custom event; @[customEvent] shorthand
 ```
 
 ## two-way data binding
+
 ```cs
 v-model="msg"  # bind input to data msg
 ```
 
 ## attribute and class binding
+
 ```cs
 v-bind:class  # bind class or attribute; :[attribute] shorthand
 ```
 
+## Inline component
 
-## components
+- add **inline-template** to component tag
 
-## slot
-```html
+```js
+<progress-view inline-template>
+  <p>Your progress: {{ progress }}</p>
+</progress-view>
 
-<slot name="header"></slot>
-<slot name="body"></slot>
-<slot name="footer"></slot>
+<script>
+  Vue.component("progress-view", {
+    data() {
+      return {
+        progress: 90,
+      };
+    },
+  });
 
-<!-- to access use <template slot="slotName"></template> 
-  <div slot="header"></div>
-
-
-  to create a default <slot> content just fill the <slot> contnent on component template
--->
+  new Vue({
+    el: "#app",
+  });
+</script>
 ```
 
+## slot
 
+- template placeholder
 
+```js
+template: `<div>
+  <slot name="header"></slot>
+  <slot name="body"></slot>
+  <slot></slot>
+  </div>`;
+
+<component>
+  <div slot="header"></div>
+  <component2 slot="body"></component2>
+  <p>Footer</p>
+</component>;
+```
 
 ## Throttle vs Debounce
 
+```cs
 throttle       # same as set timeout
 debounce       # wait all request then set timeout
+```
+
+# Reverse text
+
+```js
+<div id="app">
+  <h2>{{ reverse }}</h2>
+</div>
+
+<script>
+  new Vue({
+    el: "#app",
+    data: {
+      msg: "Hello World!",
+    },
+    computed: {
+      reverse() {
+        return this.msg.split("").reverse().join("");
+      },
+    },
+  });
+</script>
+
+```
+
+## Event wrapper
+```js
+window.Event = new (class {
+  constructor() {
+    this.vue = new Vue();
+  }
+
+  fire(event, data = null) {
+    this.vue.$emit(event, data);
+  }
+
+  listen(event, callback) {
+    this.vue.$on(event, callback);
+  }
+})();
+```s
