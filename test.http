@@ -1,0 +1,31 @@
+# POST http://127.0.0.1:3000/auth/register
+# content-type: application/json
+
+# {
+#     "username": "admin2",
+#     "password": "password123"
+# }
+
+
+##
+
+# POST http://127.0.0.1:3000/auth/login
+# Content-Type: application/json
+
+# {
+#     "username": "admin",
+#     "password": "password123"
+# }
+
+##
+
+# PUT http://127.0.0.1:3000/auth/1/update
+# Content-Type: application/json
+
+# { 
+#     "password": "NewPassword" 
+# }
+
+##
+
+DELETE http://127.0.0.1:3000/auth/1/delete

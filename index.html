@@ -1,0 +1,72 @@
+<!-- THIS IS JUST A TESTING FILE -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h2>Register</h2>
+      <form
+      onsubmit="register(event)"
+      >
+      <input type="text" name="username" />
+      <input type="text" name="password" />
+      <button type="submit">Register</button>
+    </form>
+  </div>
+    <div>
+      <h2>Login</h2>
+      <form
+      onsubmit="login(event)"
+      >
+      <input type="text" name="username" />
+      <input type="text" name="password" />
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+    <script>
+      async function register(e) {
+        e.preventDefault();
+
+        const user = {
+          username: document.forms[0][0].value,
+          password: document.forms[0][1].value,
+        };
+
+        const req = await fetch("http://127.0.0.1:3000/auth/register", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(user),
+        });
+
+        const res = await req.json();
+        console.log(res);
+      }
+      
+      async function login(e) {
+        e.preventDefault();
+
+        const user = {
+          username: document.forms[1][0].value,
+          password: document.forms[1][1].value,
+        };
+
+        const req = await fetch("http://127.0.0.1:3000/auth/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(user),
+        });
+
+        console.log(user);
+        const res = await req.json();
+        console.log(res);
+      }
+      
+    </script>
+  </body>
+</html>
