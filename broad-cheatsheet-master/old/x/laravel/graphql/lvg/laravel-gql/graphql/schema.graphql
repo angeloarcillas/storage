@@ -1,0 +1,80 @@
+# "A datetime string with format `Y-m-d H:i:s`, e.g. `2018-01-01 13:00:00`."
+# scalar DateTime
+#     @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\DateTime")
+
+# "A date string with format `Y-m-d`, e.g. `2011-05-23`."
+# scalar Date @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\Date")
+
+type Query {
+    users: [User!]! @paginate(defaultCount: 10)
+    user(id: ID @eq): User @find
+
+    books: [Book] @all
+    book(id: ID @eq): Book @find
+    booksByFeatured(featured: Boolean @eq): [Book] @all
+    complexQuery(search: String!): [Book]
+
+    categories: [Category] @all
+    category(id: ID @eq): Category @find
+}
+
+type Mutation {
+    createCategory(
+        name: String @rules(apply: ["required", "unique:categories,name"])
+    ): Category @create
+
+    updateCategory(
+        id: ID @rules(apply: ["required"])
+        name: String @rules(apply: ["required", "unique:categories,name"])
+    ): Category @update
+
+    deleteCategory(id: ID! @rules(apply: ["required"])): Category @delete
+
+    createBook(
+        title: String!
+        author: String!
+        image: String
+        link: String
+        description: String
+        featured: Boolean
+        category_id: Int!
+    ): Book @create
+
+    updateBook(
+        id: ID!
+        title: String!
+        author: String!
+        image: String
+        link: String
+        description: String
+        featured: Boolean
+        category_id: Int!
+    ): Book @update
+
+    deleteBook(id: ID! @rules(apply: ["required"])): Book @delete
+}
+
+type User {
+    id: ID!
+    name: String!
+    email: String!
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+type Book {
+    id: ID!
+    title: String!
+    author: String!
+    image: String
+    link: String
+    description: String
+    featured: Boolean
+    category: Category! @belongsTo
+}
+
+type Category {
+    id: ID!
+    name: String!
+    books: [Book] @hasMany
+}

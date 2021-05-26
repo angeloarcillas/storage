@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <div id="app">
+      <h2>{{ title }}</h2>
+      <p>{{ greet }}</p>
+    </div>
+
+    <div id="app2">
+      <h2>{{ title }}</h2>
+      <p>{{ greet }}</p>
+
+      <button v-on:click="changeTitle">change</button>
+    </div>
+
+    <script>
+      let a = new Vue({
+        el: "#app",
+        data: {
+          title: "1st",
+        },
+        methods: {},
+        computed: {
+          greet: function () {
+            return "its me " + this.title;
+          },
+        },
+      });
+
+      let b = new Vue({
+        el: "#app2",
+        data: {
+          title: "2nd",
+        },
+        methods: {
+          changeTitle: function () {
+            a.title = "new title"; // change data from 1st instance
+          },
+        },
+        computed: {
+          greet: function () {
+            return "its me " + this.title;
+          },
+        },
+      });
+
+      //edit from outside
+      b.title = "new title from outside";
+    </script>
+  </body>
+</html>

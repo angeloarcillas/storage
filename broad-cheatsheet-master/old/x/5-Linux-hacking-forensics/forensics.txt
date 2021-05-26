@@ -1,0 +1,254 @@
+
+types of compter crimes
+-phishing
+-malware/ransomeware
+-identity theft
+-finacial fraud
+-cyberterrorism
+-cyberextortion
+-cyberwarfare
+-cyberbullying
+-drug trafficking
+
+challenges for investigators
+-encryption
+-steganography
+-legal challenges
+-media formats
+-volume of data
+-time limitations
+investigative process
+-assess
+-acquire
+-analyze
+-report
+
+criminal -investigation
+-violate a law
+-fine and/or jail time
+-standard forensic process
+-formal investigation report required
+-standard of proof high
+-burden of proof on prosecution
+
+civil - investigation
+-dispute between 2 parties
+-monetary damage
+-prepoderance(>50%) of truth
+
+administrative -investigation
+-internal investigation
+-policy violation
+-threatening behavior
+-corruption
+
+rules of a forensic investigation
+-limit access to original evidence
+-make duplicate copies and examine those
+-record changes
+-chain of custody
+-standards
+-know limitations of skills
+-secure storage
+-legal
+-industry tools
+
+type of evidence - volatile evidence
+-system time
+-process information
+-open files
+-network information
+-process memory
+-clipboard
+-service/driver information
+-command history
+
+type of evidence - none volatile evidence
+-slack-space
+-hidden files
+-swap file
+-unallocated clusters
+-unused partitions
+-registry settings
+-event logs
+
+best evidence rule
+-prevent alteration of digital evidence
+	-duplicate admissible if:
+		-originaal evidence destroyed in fire/flood
+		- " in the normal course of business
+		- " in possession of third party
+
+forensic readiness
+-optimal use of digital evidence,in limited time, with limited investigation costs
+
+incident response
+-using forensics to examine malware,data breaches,etc..
+
+forensic investigator
+-evaluates damage
+-identifies/recovers data
+-extracts evidence in sound manner
+-proper handling
+-creates reports
+-testifies
+-stay current
+
+ethics
+-fairness
+-integrity
+-conflict of interest
+
+pre-investigation phase
+-planning/budget
+-lab setup/design
+-data destruction
+-evidence locker
+-workstations
+-certifications
+-Quality assurance
+-Auditing
+-Laws
+
+investigation phase
+-consent/warrant
+-first responder
+-photograph/document scene
+-collect evidence
+-analyze evident
+	warrants
+		-electronic storage device
+		-services provider
+	warrants not needed
+		-person with authority consents
+		-like child pornography/destruction of evidence
+
+post-investigation phase
+-social media behavior
+-collecting social media evidence
+-tools:facebook,forensic software,netlytic,social discovery,navigator,etc..
+
+best practices
+-authorization from decision maker
+-first response
+-search and seize
+-evidence collection
+-secure
+-copy
+-acquire/analyze
+-report
+-testify
+
+powered off computer
+-if its off,leave it off
+-photograph
+-monitor on:move mouse slightly
+
+network computer
+-photograph/document
+-unplug network cable from router/modem
+-collect all cords and peripherals connected
+-document
+
+chain of custody
+-legal document
+-demonstrates progression of evidence
+-should list all people involved in evidence collection/preservation,their actions, and contain a time stamp
+
+exhibiting numbering
+-name of investigator seizing -> alpabetical
+-date of the seizure -> dd/mm/yy
+-sequential number of exhibits -> start with 001
+-sequence number for parts of the same exhibit -> 0101a/001b
+
+data recovery tools
+-recuva
+-advanced disk recovery
+-undeleteplus
+-the sleuth kit(TSK) & autopsy
+-enCase
+-FTK
+
+HDD
+-uses magnetic storage to store/retreive data
+-non-volatile storage
+-platters
+  -circular metal disk mounted into drive enclosure
+  -2 heads per platter
+-tracks
+  -concentric rings on platter
+-sectors
+  -smallest physical storage on hard disk platter
+		bad sectors
+			-portions of disk unusable due to flaws
+			-configuration issues
+			-physical disturbance to disk
+		master boot record(MBR)
+			-starts at sector 0
+			-0xAA55
+-clusters
+	-smallest accessible logical storage unit
+	-formed by combining sectors together
+	slack space
+		-wasted area of disk cluster
+
+BIOS parameter block (BPB)
+	-describes physical layout of storage volume
+	-volume boot record
+	-FAT16,FAT32,NTSF
+	-nibble 4bits byte 8bits
+
+UEFI boot process phases
+	-security phase(SEC)
+		-handles platform restart event
+	-pre-EFI initialization(PEI)
+		-passing control to the DXE
+	-driver execution environment(DXE)
+		-DXE dispatcher -discover/execute DXE drivers in correct order
+	-boot device selection(BDS)
+		-load/execute boot selection
+	-runTime(RT)
+		-enables os to read/write enviroment variables
+		-clears UEFI from memory
+
+windows
+-traditional BIOS
+-UEFI BIOS
+
+Windows -boot process
+1.cpu send signal to motherboard,checks the bios firmware
+2.bios start a post (power on self test) and firmware settings from non-volatile memory loaded
+3.post-success/add-on adapters perform self test
+4.valid boot system disk detected
+5.firmware scans boot disk and load MBR
+6.MBR triggers bootmgr.exe that locates windows loader
+7.OS kernel(ntoskrnl.exe) loaded
+8.Hal.dll and system registry hive loaded into memory
+9.session manager:winlog.exe,service control manager,user session created
+
+MAC -boot process
+1.bootroom activated:initialize hardware
+2.post for interface
+3.remaining hardware initialize,EFI for intel-based and open firmware for powerPC-based
+4.OS selected
+5.control passed to bootX or boot.efi boot loaders
+6.kernel loaded
+7.launch runs and startup item and prepare system
+
+LINUX bios stage -boot process
+1.system hardware initialized
+2.bios retrieves informationstored in CMOS and POST test done
+3.BIOS serches for OS
+
+linux bootloader stage -boot process
+1.loads the kernel (bootleaders:LILO and GRUB)
+2.virtual file system named initrd(init RAMdisk)
+3.actual root file system prepare for deployment
+4.detection of device containsthe filesystem
+5.kernel loaded into memory
+
+linux kernel stage -boot process
+1.virtual root filesystem(VFS)executers linuxrc program
+2.kernl search for new hardware and loads driver
+3.root filesystem mounted
+4.rest of system loaded and user logs in

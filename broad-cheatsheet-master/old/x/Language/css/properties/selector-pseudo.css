@@ -1,0 +1,51 @@
+/*
+  SELECTOR
+ */
+* -> all
+p -> element
+.element -> class
+#element -> id
+div#element -> id selector | div.element -> class selector
+div p -> descendant selector (space)
+div > p ->  child selector (>)
+div + p -> adjacent sibling selector (+)
+div ~ p -> general sibling selector (~)
+
+/*
+  ATTRIBUTE SELECTOR
+ */
+[attr] { property: value; } -> select element
+[attr*="value"] -> select all elements with  value
+[attr='value'] { property: value; } -> select elements with specific value
+[attr^='val'] { property: value; } -> select elements whose attribute value starts with a specified value
+[attr$='ue'] { property: value; } -> select elements whose attribute value ends with a specified value
+[attr~='foo'] { property: value; } -> select elements with an attribute value containing a specified word
+[attr|='en'] { property: value; } ->  select elements with the specified attribute starting with the specified value + hyphen (-) foo-bar
+
+/*
+  PSEUDO CLASS
+ */
+:hover -> mouse over
+:link -> unvisited link
+:visited -> visited link
+:active -> selected link
+:focus -> selected input
+:checked -> checked input
+:disabled -> disabled input
+:in-range -> range input
+:invalid -> invalid input
+:empty -> element that has no child
+:enabled -> enabled input
+:not(selector) -> select every element that is not 'selector' // :not(p)
+:lang(foo) -> select the <p lang="foo"> ... <p/> //p:lang(val) {}
+
+:first-child | :last-child -> select first/last element
+:nth-child(even) -> child("selector") => 3n+1 / 2n+1
+
+/*
+  PSEUDO ELEMENT
+ */
+::before | ::after ->  change b/a content/effect
+::first-line -> change 1st line
+::first-letter -> change 1st letter
+::selection -> hightlighted

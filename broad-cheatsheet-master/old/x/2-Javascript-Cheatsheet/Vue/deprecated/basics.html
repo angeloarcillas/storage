@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Vue JS</title>
+  </head>
+  <style></style>
+
+  <body>
+
+    <div id="app">
+      <!-- bind href value with data uri -->
+      <a v-bind:href="uri">About</a>
+
+      <!-- create element -->
+      <p v-html="element"></p>
+
+      <!-- output vue data title -->
+      <h1>{{ title }}</h1>
+
+      <!-- call function-->
+      <h2>{{ greet('Morning') }}</h2>
+
+      <!-- increment/decrement -->
+      <div>
+        <p>my age {{age}}</p>
+      <button v-on:click="age++">+ year</button>
+      <button v-on:click="age--">- year</button>
+      </div>
+
+      <!-- increment/decrement using function-->
+      <div>
+        <p>Age: {{ age }}</p>
+      <button v-on:click="add">add year</button>
+      <button v-on:click="sub">substact year</button>
+      </div>
+
+      <!-- inc/dec w/ func + args -->
+     <div>
+      <p>Age: {{ age }}</?>
+        <button v-on:click="add2(2)">+2 year</button>
+        <button v-on:click="sub2(2)">-2 year</button>
+        <!-- add 10 on double click -->
+        <button v-on:dblclick="add2(10)">+10 year</button>
+        <button v-on:dblclick="sub2(10)">-10 year</button>
+     </div>
+
+      <!-- output mouse position -->
+      <div
+        v-on:mousemove="updateXY"
+        style="border: 1px solid #000; padding: 50px;"
+      >
+        {{ x }},{{ y }}
+      </div>
+
+      <!-- event modifiers -->
+      <div>
+        <!-- 1 click only -->
+        <p>Age: {{ age }} <button v-on:click.once="add">+1 year</button></p>
+        <!-- e.preventDefault -->
+        <a v-on:click.prevent="doThis" href="#">About</a>
+      </div>
+
+      <!-- Keyboard Events -->
+      <div>
+        <input type="text" v-on:keyup.enter="logName" />
+        <!-- alt+enter -->
+      <input type="text" v-on:keyup.alt.enter="logAge" />
+      </div>
+
+      <!-- two-way data binding-->
+      <div>
+      <input type="text" v-model="input1" />
+      <p>{{ input1 }}</p>
+      <input type="text" v-model="input2" />
+      <p>{{ input2 }}</p>
+      </div>
+
+      <!-- computed properties -->
+      <div>
+        <button v-on:click="a++">add A</button>
+      <button v-on:click="b++">add B</button>
+      <p>A: {{ a }}, B: {{ b }}</p>
+      <p>Age + A: {{ addToA }}</p>
+      <p>Age + B: {{ addToB }}</p>
+      </div>
+    </div>
+  </body>
+  <script>
+    new Vue({
+      el: "#app",
+      data: {
+        name: "foobar",
+        uri: "http://www.foo.com",
+        element: '<a href="http://www.foo.com">Element</a>',
+        age: 20,
+        x: 0,
+        y: 0,
+        input1: "",
+        input2: "",
+        a: 1,
+        b: 2,
+      },
+      methods: {
+        greet: function (time) {
+          return "Good " + time + " " + this.name;
+        },
+        add: function () {
+          this.age++;
+        },
+
+        sub: function () {
+          this.age--;
+        },
+
+        add2: function (inc) {
+          this.age += inc;
+        },
+
+        sub2: function (dec) {
+          this.age -= dec;
+        },
+        updateXY: function (event) {
+          this.x = event.offsetX;
+          this.y = event.offsetY;
+        },
+        logName: function () {
+          console.log(this.name);
+        },
+        logAge: function () {
+          console.log(this.age);
+        },
+      },
+      computed: {
+        addToA: function () {
+          return this.age + this.a;
+        },
+        addToB: function () {
+          return this.age + this.b;
+        },
+      },
+    });
+  </script>
+</html>

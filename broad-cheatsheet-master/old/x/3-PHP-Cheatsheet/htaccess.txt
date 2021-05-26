@@ -1,0 +1,145 @@
+# .htaccess
+
+# Make PHP code look like other code types
+AddType application/x-httpd-php .asp .py .pl
+
+# Make PHP code look like unknown types
+AddType application/x-httpd-php .bop .foo .133t
+
+# Make all PHP code look like HTML
+AddType application/x-httpd-php .htm .html
+
+=================================
+RewriteEngine on
+
+# Rewrite /foo/bar to /foo/bar.php
+RewriteRule ^([^.?]+)$ %{REQUEST_URI}.php [L]
+
+# Return 404 if original request is /foo/bar.php
+RewriteCond %{THE_REQUEST} "^[^ ]* .*?\.php[? ].*$"
+RewriteRule .* - [L,R=404]
+
+# NOTE! FOR APACHE ON WINDOWS: Add [NC] to RewriteCond like this:
+# RewriteCond %{THE_REQUEST} "^[^ ]* .*?\.php[? ].*$" [NC]
+
+===================================
+RewriteEngine On
+
+# Unless directory, remove trailing slash
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)/$ http://example.com/folder/$1 [R=301,L]
+
+# Redirect external .php requests to extensionless url
+RewriteCond %{THE_REQUEST} ^(.+)\.php([#?][^\ ]*)?\ HTTP/
+RewriteRule ^(.+)\.php$ http://example.com/folder/$1 [R=301,L]
+
+# Resolve .php file for extensionless php urls
+RewriteRule ^([^/.]+)$ $1.php [L]ter('funcName'); ##autoload function
+
+
+/*
+remember to change your <a> to the new url we created as well
+ex. <a href="article/1/helloWorld"></a>
+*/
+
+RewriteEngine on
+#check if no directory
+RewriteCond %{REQUEST_FILENAME} ! -d // -d => directory
+
+#check if there is file
+RewriteCond %{REQUEST_FILENAME} \.php -f // -f filename
+
+#write what to allow
+RewriteRule ^article/([0-9]+/([0-9a-zA-Z_-])+) // article.php?id=$1&name=$2
+
+/*
+if there are many file just copy from RewriteCond to RewriteRule
+then change the filename (article to profile)
+*/
+
+=================================
+# Turn on the rewrite engine
+RewriteEngine  on
+# If the request doesn't end in .php (Case insensitive) continue processing rules
+RewriteCond %{REQUEST_URI} !\.php$ [NC] //NC => none case
+# If the request doesn't end in a slash continue processing the rules
+RewriteCond %{REQUEST_URI} [^/]$
+# Rewrite the request with a .php extension. L means this is the 'Last' rule
+RewriteRule ^(.*)$ $1.php [L]
+
+=================================
+# Make PHP code look like other code types
+AddType application/x-httpd-php .asp .py .pl
+
+# Make PHP code look like unknown types
+AddType application/x-httpd-php .bop .foo .133t
+
+# Make all PHP code look like HTML
+AddType application/x-httpd-php .htm .html
+
+=================================
+RewriteEngine on
+
+# Rewrite /foo/bar to /foo/bar.php
+RewriteRule ^([^.?]+)$ %{REQUEST_URI}.php [L]
+
+# Return 404 if original request is /foo/bar.php
+RewriteCond %{THE_REQUEST} "^[^ ]* .*?\.php[? ].*$"
+RewriteRule .* - [L,R=404]
+
+# NOTE! FOR APACHE ON WINDOWS: Add [NC] to RewriteCond like this:
+# RewriteCond %{THE_REQUEST} "^[^ ]* .*?\.php[? ].*$" [NC]
+
+===================================
+RewriteEngine On
+
+# Unless directory, remove trailing slash
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)/$ http://example.com/folder/$1 [R=301,L]
+
+# Redirect external .php requests to extensionless url
+RewriteCond %{THE_REQUEST} ^(.+)\.php([#?][^\ ]*)?\ HTTP/
+RewriteRule ^(.+)\.php$ http://example.com/folder/$1 [R=301,L]
+
+# Resolve .php file for extensionless php urls
+RewriteRule ^([^/.]+)$ $1.php [L]ter('funcName'); ##autoload function
+
+
+
+
+
+
+
+
+
+///////////////CHANGE PHP FILE PATH ON PRODUCTION MODE//////////////////
+
+/*
+name file as " .htaccess "
+
+remember to change your <a> to the new url we created as well
+ex. <a href="article/1/helloWorld"></a>
+*/
+
+RewriteEngine on
+//check if no directory
+RewriteCond %{REQUEST_FILENAME} ! -d //-> -d => directory
+//check if there is file
+RewriteCond %{REQUEST_FILENAME} \.php -f //-f filename
+//write what to allow
+RewriteRule ^article/([0-9]+/([0-9a-zA-Z_-])+) article.php?id=$1&name=$2
+
+/*
+if there are many file just copy from RewriteCond to RewriteRule then change the filename (article to profile)
+*/
+
+#this is another sample
+
+# Turn on the rewrite engine
+RewriteEngine  on
+# If the request doesn't end in .php (Case insensitive) continue processing rules
+RewriteCond %{REQUEST_URI} !\.php$ [NC] //NC => none case
+# If the request doesn't end in a slash continue processing the rules
+RewriteCond %{REQUEST_URI} [^/]$
+# Rewrite the request with a .php extension. L means this is the 'Last' rule
+RewriteRule ^(.*)$ $1.php [L]

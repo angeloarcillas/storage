@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  text-align: center;
+  padding: 50px 0 20px;
+}
+.title h2 {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 36px;
+}
+.container {
+  width: 80%;
+  height: 70em;
+  background-color: #01FFE9;
+  margin: 0 auto;
+  border: none;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+.container .left {
+  display: none;
+  float: left;
+  height: 70em;
+  width: 50%;
+  box-sizing: border-box;
+}
+.wrapper-content {
+  margin: 20% 20px;
+}
+.wrapper-content h2 {
+  font-size: 26px;
+  font-weight: bolder;
+  text-align: center;
+}
+.wrapper-content p {
+  text-indent: 30px;
+  display: flex;
+  flex-flow: wrap column;
+}
+.container .right {
+  float: right;
+  width: 100%;
+  height: 77em;
+  box-sizing: border-box;
+}
+
+.form-box {
+  width: 100%;
+  padding: 80px 40px;
+  box-sizing: border-box;
+  height: 70em;
+  background:#fff;
+}
+.form-box label {
+  letter-spacing: 2px;
+margin: 0;
+padding: 0;
+font-size: 22px;
+font-weight: bold;
+color: #000;
+}
+label {
+  display: block;
+}
+.form-box .reg-input {
+  width: 100%;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 2px solid #e1e1e1;
+  outline: none;
+  height: 40px;
+}
+.form-box input:focus,
+.form-box select:focus {
+  border-bottom: 2px solid #01FFE9;
+}
+::placeholder {
+  opacity: 0.5;
+  letter-spacing: 1px;
+}
+.form-box .reg-sel {
+  width: 100%;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 2px solid #e1e1e1;
+  outline: none;
+  height: 40px;
+}
+.form-box .terms {
+  font-size: 15px;
+  font-weight: lighter;
+  color: #686869;
+}
+.form-box .terms a {
+text-decoration: none;
+}
+.form-box button {
+  text-transform: uppercase;
+  font-size: 22px;
+  width: 100%;
+  font-weight: bold;
+  letter-spacing: 5px;
+border: none;
+border-radius: 25px;
+outline: none;
+height: 40px;
+color: #000;
+cursor: pointer;
+}
+.form-box button:hover {
+  background: #01FFE9;
+  font-size: 26px;
+  font-weight: bolder;
+}
+.reg-date {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 10px;
+  padding: 2px 10px;
+text-align: right;
+}
+@media only screen and (min-width: 1028px) {
+.container .right {
+    width: 50%;
+    }
+    .container .left{
+      display: block;
+    }
+  }

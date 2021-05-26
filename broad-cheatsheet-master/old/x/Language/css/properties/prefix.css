@@ -1,0 +1,14 @@
+.element {
+  -moz-  /* mozila */
+  -webkit-  /* chrome - safari */
+  -o-, -xv-  /* opera */
+  -ms-  /* microsoft */
+  -khtml-, -konq-  /* konqueror */
+  -atsc-  /* advanced television standars committee */
+  -wap-  /* WAP forum */
+  -ah-  /* antenna house */
+  -hp-  /* hewlett packard */
+  -ro-  /* real objects */
+  -rim-  /* research in motion */
+  -tc-  /* tall components */
+}

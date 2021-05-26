@@ -1,0 +1,73 @@
+.parent {
+  display: flex;
+  width: 100%;
+  height: 500px;
+  background-color: #ccc;
+  
+  /*
+  [ flex-direction ]
+
+  row - align content in row
+  row-reverse  - align content in row on reverse order
+  column  - align content in column
+  column reverse  - align content in column on reverse order
+  */
+  flex-direction: row;
+
+  /*
+  [ flex-wrap ]
+
+  wrap - wrap content
+  nowrap - dont wrap
+  wrap-reverse  - reverse wrap content
+  */
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+
+  /*
+  [ justify-content - X-axis ]
+
+  flex-start - upper left
+  flex-end - upper right
+  center - top center
+  space-between - add even space between content
+  space-around - add even space around content
+   */
+  justify-content:space-between;
+
+  /*
+  [ align-items - Y-axis ]
+
+  baseline - default
+  flex-start - upper left
+  flex-end - lower left
+  center - left center
+  stretch -100% height/width
+   */
+  align-items:flex-start;
+
+  /*
+  [ align-content - by row ] !This property has no effect on single line flex containers
+
+  start - top
+  center - center content
+  space-between - add even space betweem row
+  space-around - add even space around row
+  */
+  align-content: space-between;
+}
+
+.child {
+  background-color: blue;
+}
+.child-2 {
+  /*
+  [ FLEX - grow + shrink + basis ]
+
+  flex-grow: 0; - increase size
+  flex-shrink: 5; - decrease size
+  flex-basis: 200px; - item size
+  */
+  flex: 0 5 200px;
+  background-color: red;
+}

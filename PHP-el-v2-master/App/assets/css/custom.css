@@ -1,0 +1,49 @@
+/* Container
+========================================================================== */
+.main-container {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.container {
+  width: 100%;
+  /* padding: 2rem; */
+}
+
+@media screen and (min-width: 736px) {
+  .container {
+    margin: 0 auto;
+    width: 85%;
+  }
+}
+
+/* Wrapper
+========================================================================== */
+.wrapper {
+  position: relative;
+  z-index: 1;
+  padding: 2rem 0 0.1rem;
+}
+
+@media screen and (min-width: 736px) {
+  .wrapper {
+    padding: 3rem 0 1rem;
+  }
+  .w-50 {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .wrapper {
+    padding: 4rem 0 2rem;
+  }
+}
+
+.mx-auto {
+  margin: 0 auto;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}

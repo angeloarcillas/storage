@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Modal
+   ========================================================================== */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .4);
+  overflow: auto;
+}
+.modal-dialog {
+  width: 50%;
+  border: 1px solid #dfdfdf;
+  border-radius: .25rem;
+  margin: 1.75rem auto;
+  background-color: #fefefe;
+}
+
+@media screen and (max-width: 768px) {
+.modal-dialog { width: 100%; }
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+  padding: 1rem 2rem;
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-top: 1px solid #dfdfdf;
+}

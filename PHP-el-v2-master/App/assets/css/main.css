@@ -1,0 +1,40 @@
+@import url('components/preset.css');
+@import url('components/typography.css');
+@import url('components/card.css');
+@import url('components/form.css');
+@import url('components/button.css');
+@import url('components/table.css');
+@import url('custom.css');
+@import url('header.css');
+
+#remember + label{
+  font-size: .9em;
+}
+.login-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#pagination {
+  margin-bottom: 15rem;
+}
+
+.pagination {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.pagination .links a {
+padding: 5px;
+border: 1px solid #e1e1e1;
+}
+
+a.active {
+background-color: #e1e1e1;
+}
+
+a {
+  color: #1e1e1e;
+}

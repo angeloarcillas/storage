@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- META TAGS -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="reset-style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Manjari&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <!-- LOADER -->
+      <div class="loader">
+        <div class="loader-box"></div>
+        <div class="lds-ellipsis">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <!-- HEADER -->
+      <span class="nav-brand-logo"></span>
+      <h2 class="nav-brand-name">Evangel Laclairs</h2>
+      <span
+        class="nav-menu"
+        onclick="document.querySelector('nav').style.width='16em'"
+      ></span>
+
+      <!-- SIDE NAV -->
+      <nav>
+        <span
+          class="close .nav-close"
+          onclick="this.parentNode.style.width = '0'"
+          >&times;</span
+        >
+        <span class="sidebar-brand">Evangel</span>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Explore</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="sidebar-icons">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- BANNER -->
+      <section id="banner">
+        <div class="container">
+          <!-- left banner -->
+          <div class="left">
+            <p>Welcome To my portfolio website!</p>
+            <h2>Hello, I`m a <span class="banner-text-animate"></span></h2>
+            <p class="banner-text-content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Perspiciatis tenetur doloremque assumenda quam rem! Quo, illo quam
+              in ipsa perspiciatis consequatur at nobis eaque fugiat perferendis
+              aliquid sapiente! Ab, facilis?
+            </p>
+            <div class="btn-group">
+              <button class="btn banner-resume">Download Resume</button>
+              <button class="btn banner-hire">Hire Me!</button>
+            </div>
+          </div>
+
+          <!-- right banner -->
+          <div class="right">
+            <div class="carousel-container">
+              <div class="banner-carousel-item fade">
+                <div class="caption-text">Caption Text</div>
+              </div>
+
+              <div class="banner-carousel-item fade">
+                <div class="caption-text">Caption Two</div>
+              </div>
+
+              <div class="banner-carousel-item fade">
+                <div class="caption-text">Caption Three</div>
+              </div>
+            </div>
+            <div style="text-align: center;">
+              <span class="banner-carousel-indicators"></span>
+              <span class="banner-carousel-indicators"></span>
+              <span class="banner-carousel-indicators"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICE -->
+      <section id="service">
+        <h2>Service</h2>
+        <div class="container">
+          <div class="service-box">
+            <div class="service-icon"></div>
+            <h3>Lorem</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis
+              ipsam illum ducimus sunt quasi labore, aspernatur quos, fugit
+              mollitia facilis corrupti reiciendis harum quae obcaecati.
+            </p>
+          </div>
+          <div class="service-box">
+            <div class="service-icon"></div>
+            <h3>Ipsum</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis
+              ipsam illum ducimus sunt quasi labore, aspernatur quos, fugit
+              mollitia facilis corrupti reiciendis harum quae obcaecati.
+            </p>
+          </div>
+          <div class="service-box">
+            <div class="service-icon"></div>
+            <h3>Lipsum</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis
+              ipsam illum ducimus sunt quasi labore, aspernatur quos, fugit
+              mollitia facilis corrupti reiciendis harum quae obcaecati.
+            </p>
+          </div>
+          <div class="service-box">
+            <div class="service-icon"></div>
+            <h3>Illum</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis
+              ipsam illum ducimus sunt quasi labore, aspernatur quos, fugit
+              mollitia facilis corrupti reiciendis harum quae obcaecati.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO -->
+      <section id="portfolio">
+        <h2>My Works</h2>
+        <div class="container">
+          <div class="carousel-container">
+            <div class="carousel-item fade">
+              <div class="caption-text">Caption Text</div>
+            </div>
+
+            <div class="carousel-item fade">
+              <div class="caption-text">Caption Two</div>
+            </div>
+
+            <div class="carousel-item fade">
+              <div class="caption-text">Caption Three</div>
+            </div>
+            <div class="carousel-controls">
+              <a class="carousel-control-prev" onclick="plusSlides(-1)"
+                ><span>&#10094;</span></a
+              >
+              <a class="carousel-control-next" onclick="plusSlides(1)"
+                ><span>&#10095;</span></a
+              >
+            </div>
+          </div>
+          <div style="text-align: center;">
+            <span class="carousel-indicators" onclick="currentSlide(1)"></span>
+            <span class="carousel-indicators" onclick="currentSlide(2)"></span>
+            <span class="carousel-indicators" onclick="currentSlide(3)"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- TEAM -->
+      <section id="team">
+        <h2>Hire a Developer</h2>
+        <div class="container">
+          <div class="box">
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1567479094727-96a0e31ec384?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                alt="profile-img"
+                style="width: 100%;"
+              />
+              <h3>Evangel Laclairs</h3>
+              <p class="card-title">Front-End Web Developer</p>
+              <p>Somewhere University</p>
+              <div class="profile-icon sidebar-icons">
+                <a href="#social-1"><span></span></a>
+                <a href="#social-2"><span></span></a>
+                <a href="#social-3"><span></span></a>
+              </div>
+              <div class="profile-rating">
+                <span>&starf;</span>
+                <span>&starf;</span>
+                <span>&starf;</span>
+                <span>&star;</span>
+                <span>&star;</span>
+              </div>
+              <button class="card-btn">Contact</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1567479094727-96a0e31ec384?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+              alt="profile-img"
+              style="width: 100%;"
+            />
+            <h3>Laclairs Lorem</h3>
+            <p class="card-title">Back-End Web Developer</p>
+            <p>Anywhere University</p>
+            <div class="profile-icon sidebar-icons">
+              <a href="#social-1"><span></span></a>
+              <a href="#social-2"><span></span></a>
+              <a href="#social-3"><span></span></a>
+            </div>
+            <div class="profile-rating">
+              <span>&starf;</span>
+              <span>&starf;</span>
+              <span>&starf;</span>
+              <span>&starf;</span>
+              <span>&starf;</span>
+            </div>
+            <button class="card-btn">Contact</button>
+          </div>
+
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1567479094727-96a0e31ec384?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+              alt="profile-img"
+              style="width: 100%;"
+            />
+            <h3>Evangel Ipsum</h3>
+            <p class="card-title">Data & security Analyst</p>
+            <p>Nowhere University</p>
+            <div class="profile-icon sidebar-icons">
+              <a href="#social-1"><span></span></a>
+              <a href="#social-2"><span></span></a>
+              <a href="#social-3"><span></span></a>
+            </div>
+            <div class="profile-rating">
+              <span>&star;</span>
+              <span>&star;</span>
+              <span>&star;</span>
+              <span>&star;</span>
+              <span>&star;</span>
+            </div>
+            <button class="card-btn">Contact</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="container clearfix">
+          <!-- contact us -->
+          <div class="contact-us">
+            <h3>Send us a message</h3>
+            <form action="">
+              <input type="text" placeholder="Name" />
+              <input type="email" placeholder="Email" />
+              <input type="text" placeholder="Subject" />
+              <textarea
+                name=""
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="Message"
+              ></textarea>
+              <button class="btn">Send</button>
+            </form>
+          </div>
+
+          <!-- contact info -->
+          <div class="contact-info">
+            <h3>Contact Info</h3>
+            <div>
+              <h4>Where to find us</h4>
+              <p>
+                Lorem ipsum dolor sit amet, Voluptas labore esse in velit,
+                asperiores vitae ipsum impedit.
+              </p>
+            </div>
+            <div>
+              <h4>Email us</h4>
+              <p>lorem@ipsum.com<br />lipsum60@ipsum.com</p>
+            </div>
+            <div>
+              <h4>Call us</h4>
+              <p>
+                Phone:(+90)777 77777<br />Mobile:(+90)666 6666<br />Fax:(+90)
+                999 9999
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <!-- company info -->
+          <div class="company">
+            <h3>Lipsum</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+              officiis corporis, illo eligendi quaerat esse fuga aspernatur
+              reiciendis corrupti. Autem expedita, provident illum fuga tenetur
+              maiores qui illo mollitia assumenda. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Voluptas labore esse in velit. Quas,
+              esse sed eaque facilis natus maxime inventore in numquam soluta
+              ipsa minima, asperiores vitae ipsum impedit.
+            </p>
+          </div>
+
+          <!-- social media -->
+          <div class="social">
+            <h3>Follow Us</h3>
+            <p>Lorem</p>
+            <p>Merol</p>
+            <p>Ipsum</p>
+            <p>Muspi</p>
+          </div>
+
+          <!-- notify -->
+          <div class="notify">
+            <h3>Get Notified</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores
+              sapiente animi quasi nobis atque suscipit iure perferendis vero,
+              nihil itaque accusantium numquam distinctio provident enim harum
+              modi. Nisi, explicabo iure!
+            </p>
+            <div class="subscribe clearfix">
+              <input type="text" placeholder="Email" />
+              <button class="btn">M</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- legal -->
+      <p class="legal">
+        &copy; copyright Lipsum 2019 | Design by
+        <a href="#">Evangel Laclairs</a>
+      </p>
+    </footer>
+
+    <!-- scroll to top -->
+    <a href="#">
+      <p class="scroll-top"></p>
+    </a>
+
+    <script>
+      // page loader
+      document.onreadystatechange = function () {
+        document.querySelector(".loader-box").style.width = "99%";
+
+        if (document.readyState === "complete") {
+          // remove loader
+          document.querySelector(".loader").style.display = "none";
+
+          // add script
+          let element = document.createElement("script");
+          element.src = "main.js";
+          document.body.appendChild(element);
+        }
+      };
+    </script>
+  </body>
+</html>

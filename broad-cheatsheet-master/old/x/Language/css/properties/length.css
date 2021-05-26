@@ -1,0 +1,20 @@
+.element {
+/*  Relative Lengths  */
+% -> percent
+em -> multiples of element original size
+rem -> root element size
+vw | vh -> multiples of viewport`s 1% width/height
+vmin | vmax -> vh/vw smaller/greater
+ex -> x-height of font
+ch -> width of the 0
+
+/*  Absolute Lengths  */
+px -> pixel
+pt -> points
+pc -> picas
+cm -> centimeter
+mm -> millimeterval
+in -> inch
+
+
+}

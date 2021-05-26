@@ -1,0 +1,123 @@
+.parent {
+  display: flex;
+}
+
+.child {
+  width: 10em;
+  height: 10em;
+  margin-right: 50px;
+  background: #a1e1e1;
+}
+
+/****************************
+  ANIMATION SYNTAX
+*****************************/
+.animation-1:hover {
+  /* animation: name duration timing-function delay iteration-count direction fill-mode play-state; */
+  animation: scale 5s linear 1s;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(2, 2);
+  }
+}
+
+/****************************
+  ANIMATION TIMING
+  -same w/ transform property
+*****************************/
+.animation-2:hover {
+  animation: stepStart 2s;
+  animation-timing-function: steps(6, start);
+  /* animation-timing-function: steps(8, end); */
+  /* animation-timing-function: steps(4, jump-start); */
+  /* animation-timing-function: steps(10, jump-end); */
+  /* animation-timing-function: steps(20, jump-none); */
+  /* animation-timing-function: steps(5, jump-both); */
+}
+
+@keyframes stepStart {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(100px);
+  }
+}
+
+/****************************
+  ANIMATION ITERATION + DIRECTION + PLAY-STATE
+  normal - forward animation
+  reverse - backward animation
+  alternate - forward then backward
+  alternate-reverse - backward then forward
+*****************************/
+.animation3 {
+  animation: move 2s infinite;
+  /* iteration - infinite/number(123)*/
+  /* animation-direction:normal; (default) */
+  /* animation-direction:reverse; */
+  animation-direction: alternate;
+  /* animation-direction:alternate-reverse; */
+}
+
+/* PLAY STATE - paused or running */
+.animation3:hover {
+  animation-play-state: paused;
+}
+
+@keyframes move {
+  0% {
+    transform: rotate(45deg);
+    background-color: red;
+    margin-top: 50px;
+  }
+
+  25% {
+    transform: rotate(90deg);
+    background-color: yellow;
+    margin-right: 50px;
+  }
+
+  50% {
+    transform: rotate(120deg);
+    background-color: blue;
+    margin-bottom: 50px;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    background-color: green;
+    margin-left: 50px;
+  }
+}
+
+/****************************
+  ANIMATION FILL-MODE
+  none - no style before/after
+  forward - keep last keyframes style
+  backward - keep first keyframes style
+  both - follow the rules for both forwards and backwards, extending the animation properties in both directions
+*****************************/
+.animation4:hover {
+  animation: slideDown 2s ease;
+  /* animation-fill-mode: none; */
+  /* animation-fill-mode: forwards; */
+  /* animation-fill-mode: backwards; */
+  /* animation-fill-mode: both; */
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(100px);
+  }
+}

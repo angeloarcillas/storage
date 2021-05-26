@@ -1,0 +1,37 @@
+@font-face {
+src: url(fontPath);
+font-family: fontName; /* fontName -> keyword*/
+}
+
+p {
+  font-family: fontName;
+}
+/*
+  font type
+  font size
+  font style
+  font variant
+  font thickness
+  font alignment
+  font decoration
+  font indent
+  font case
+  font color
+  word space
+  line-height -> spaces
+*/
+p {
+  font-family: arial,"Times New Roman";
+  font-size: 22px;
+  font-style: italic;
+  font-variant:small-caps;
+  font-weight: 100;
+  text-align: left;
+  text-decoration: underline;
+  text-indent: 30px;
+  text-transform: capitalize;
+  color:  rgba(77,0,123,1); /* rgba() -> red blue green aplha - opacity */
+  word-spacing: 10px;
+  line-height: 30px;
+
+}

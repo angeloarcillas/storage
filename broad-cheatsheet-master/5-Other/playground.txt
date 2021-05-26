@@ -1,0 +1,14 @@
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.child {
+  flex: 0 1 150px;
+  /* flex: 1 1 150px; */
+  margin: 5px;
+}
+
+
+aspect-ration:

@@ -1,0 +1,12 @@
+cross-site scripting (XSS)
+  reflected xss - from current http request
+  stored xss - from database
+  dom-based xss - vulnerability exists in client-side code
+
+  // prevent
+  filter input
+  encode data
+  appropriate response header
+
+
+mordernizr - detection tool, detect user`s browser compatibility

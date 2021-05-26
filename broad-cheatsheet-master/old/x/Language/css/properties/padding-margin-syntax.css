@@ -1,0 +1,17 @@
+/*
+t - top
+r - right
+b - bottom
+l - left
+ */
+.element {
+  /* all */
+  padding: 1em;
+  /* tb-1 lr-2  top&bottom left&right*/
+  padding: 1em 2em;
+  /* t-1 lr-2 b-3  top left&right bottom */
+  padding: 1em 2em 3em;
+  /* t-1 r-2 b-3 l-4  top right bottom left*/
+  padding: 1em 2em 3em 4em;
+}
+/* MARGIN SAME WITH PADDING */

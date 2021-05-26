@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Pagination
+   ========================================================================== */
+
+.pagination {
+  display: flex;
+  border-radius: .25rem;
+}
+.pagination li {
+  list-style-type: none;
+}
+.pagination a {
+  border: 1px solid #dee2e6;
+  padding: .5rem .75rem;
+  text-decoration: none;
+  margin-left: -1px;
+}

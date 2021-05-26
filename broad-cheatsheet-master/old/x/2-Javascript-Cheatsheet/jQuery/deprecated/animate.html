@@ -1,0 +1,54 @@
+<!-- animate/change css/stop animation -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <div class="content-box">
+
+    <h1 class="content-title">Header</h1>
+    <p>This is a content</p>
+
+  </div>
+  <button class="stop-content" type="button" name="button"></button>
+</body>
+<script>
+  $(document).ready(function() {
+
+    //slide contents
+    $('.info-title').click(function() {
+      $('.info.content').slideToggle("slow", function() {
+        alert("alert");
+      });
+    });
+    //change css
+    $(".content-box").click(function() {
+      //animate({ } -> array to change css,1000 -> speed of the animaion,function -> action after the animation is finisg)
+      $(".content-box").animate({
+        width: '500px',
+        height: '300px' //+=200px -> adds 200px on height -=200px -> minus 200px on height everytime the user clicks
+        //use " " -> slow/fast
+      }, 1000, );
+      $(".content-after").show().animate({
+        opacity: '1'
+      }, 3000)
+    });
+
+    //stop animation
+    $(".stop-content").click(function(){
+      //stop current animation
+      $(".content-box").stop()
+      //remove the 1st animation/instant w/out effect
+      $(".content-box").stop(true)
+      //remove the 1st and 2nd(or maybe all) animation/instant w/out effect ||stop(true,true,..) -> check this part
+      $(".content-box").stop(true,true)
+    });
+
+  });
+</script>
+
+</html>

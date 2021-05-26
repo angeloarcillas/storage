@@ -1,0 +1,50 @@
+nav {
+	height: 100px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid black;
+}
+.login-form {
+	float: right;
+}
+.left {
+	float: left;
+	height: 50vh;
+	width: 45%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+	border: 1px solid black;
+	margin: 20px;
+}
+.left .link {
+	text-indent: 0px;
+	text-align: center;
+}
+.left p {
+	letter-spacing: 1px;
+	width: 80%;
+	text-indent: 5em;
+}
+.right {
+	width: 45%;
+	display: flex;
+	flex-flow: row wrap;
+}
+.right label {
+	display: inline-block;
+	font-size: 18px;
+	font-weight: bolder;
+}
+.right input {
+	margin-top: 10px;
+	margin-bottom: 20px;
+	border: none;
+	width: 200px;
+	height: 30px;
+	border-bottom: 1px solid #000;
+	outline: none;
+}
+.right input:focus {
+	border: 1px solid #e1a1e1;
+}

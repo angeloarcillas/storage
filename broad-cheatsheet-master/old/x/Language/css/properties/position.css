@@ -1,0 +1,52 @@
+/*
+  static - default
+  relative - respect position
+  absolute - has own position but respect parent position
+  fixed - fixed position
+  sticky - relative then fixed depends on scroll position
+ */
+
+div {
+  border: 1px solid black;
+  padding: 100px;
+}
+section {
+  position: absolute;
+  left: 10%;
+  border: 1px solid black;
+  min-width: 80%;
+  min-height: 200%;
+}
+.left {
+  position: relative;
+  float: left;
+  background: #e1e1a1;
+}
+
+.right {
+  position: relative;
+  float: right;
+  background: #e1a1e1;
+}
+
+div .right-div {
+  padding: 25px;
+  position: absolute;
+  bottom: 10%;
+  right: 0%;
+  background: #e1a1a1;
+}
+.fixed {
+  padding: 50px;
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+  background: #a1a1a1;
+}
+.sticky {
+  padding: 50px;
+  position: sticky;
+  top: 0;
+  z-index: -1;
+  background: #a1e1a1;
+}

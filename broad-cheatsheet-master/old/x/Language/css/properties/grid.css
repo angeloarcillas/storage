@@ -1,0 +1,120 @@
+.parent {
+  display: grid;
+  /* 
+  [ grid-template-columns - set grid columns ]
+  
+  //length - 1fr => 1 part of the available space
+  minmax(100px, 1fr) - min: 100px max: 1fr
+  fit-content(100px) - min(maximum size, max(minimum size, argument))
+  repeat(3, 1fr); - 1fr 1fr 1fr - 3 columns with even spaces
+  */
+  grid-template-columns: repeat(3, 1fr);
+
+  /*  
+  [ grid-template-rows set grid rows ]
+
+  properties same with [ grid-template-columns ]
+  */
+  grid-template-rows: repeat(3, 1fr);
+
+  /* 
+  [ grid-auto-flow - controls how the auto-placement algorithm works ]
+  
+  row - auto flow by row
+  column - auto flow by column
+  row dens - auto flow by row + fit items
+  column dens - auto flow by column + fit items
+  */
+  grid-auto-flow: row dense;
+
+  /*
+  [ grid-column ]
+    
+  grid-column-start - specify start column position
+  grid-column-end - specify end column position
+  */
+  grid-column: 1, -1;
+
+  /*
+  [ grid-column ]
+    
+  grid-row-start - specify start row position
+  grid-row-end - specify end row position
+  */
+  grid-row: 1, -1;
+
+  /* 
+    [ grid-area - shothand for  <grid-column-start / grid-column-end / grid-row-start / grid-row-end> ] 
+  */
+  grid-area: 2 / 1 / 2 / 4;
+
+  
+  /* 
+  [ grid - shorthad for every grid properties ]
+   */
+  grid: repeat(3, 80px) / auto-flow;
+}
+
+
+
+
+
+
+
+
+
+
+.grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+
+  /* specifies named grid-areas */
+  grid-template-areas:
+    "title title"
+    "header header"
+    "sidebar sidebar"
+    "content content"
+    "footer footer";
+
+  grid-gap: 10px;
+}
+
+.title {
+  /*named grid areas */
+  grid-area: title;
+}
+.header {
+  grid-area: header;
+}
+.sidebar {
+  grid-area: sidebar;
+}
+.content {
+  grid-area: content;
+  display: grid;
+}
+.footer {
+  grid-area: footer;
+}
+
+.grid div:nth-child(even) {
+  background-color: red;
+}
+.grid div:nth-child(odd) {
+  background-color: blue;
+}
+
+@media screen and (min-width: 720px) {
+  /* . - empty space */
+  .grid {
+    grid-template-columns: 1fr 500px 500px 1fr;
+    grid-template-areas:
+      ". title title ."
+      ". header header ."
+      ". sidebar content."
+      ". footer footer .";
+    grid-gap: 10px;
+  }
+}

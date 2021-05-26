@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    .hover-underline-animation {
+      position: relative;
+      display: inline-block;
+      color: #1e1e1e;
+    }
+
+    .hover-underline-animation:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 100%;
+      background-color: #1e1e1e;
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      transition: transform .25s ease-out;
+    }
+
+    .hover-underline-animation:hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  </style>
+
+  <body>
+    <p class="hover-underline-animation">Hover this text to see the effect!</p>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+# Ethical Hacking
+
+## laws
+-HIPAA -health insurance portability and accountability act
+-PCI-DSS -payment card industry data security standard
+-SOX -sarbanes-oxley act
+-DMCA -digital millennium copyright act
+-FISMA -federal information security management act
+-ISO/IEC 27001:2013
+
+## learning objectives
+-active vs passive
+    active -interaction
+    passive -public available
+-benefits of footprinting
+    -know security posture
+    -reduce focus area
+    -identify vulnerabilities
+    -network map
+-ways to do footprinting
+
+## how?
+-search engines
+-google hacking/dorking
+-shodan -search engine for hacker
+-whois
+-social media
+    -linkedin
+    -facebook
+-competitive intelligence
+-job boards
+-alerts
+-mirror website
+-email footprinting
+    -theharvester
+
+## tools
+-maltego
+-recon-ng
+-osrframework
+
+## google hacking
+-filetype:type -search only files of specific type
+    -filetype:doc -would return microsoft word documents
+-intitle:string -search only for pages that contain the string in the title
+    -intitle:login -return result with word login in the title
+-inurl:string -display pages with the string in the url
+    -inurl:passwd -show all pages with the word passwd in the url
+-site:domain -display pages for a specific website of domain
+    -site:microsoft.com passwds
+
+## CIA triad
+-confidetiality
+-integrity
+-availability
+
+## authentication/non-repudiation
+-authentication
+    -something you are (biometric)
+    -something you have (badge)
+    -something you know (password)
+-nonrepudation
+    -i can prove you did it (emails)
+    
+## physical security
+-plans,steps,and procedures to protect your assets
+-physical measures:touch,taste
+-technical measures:smartcards
+-operational measures:policies
+
+## scanning methodology
+-check for live systems
+-check for open ports
+-scan beyond tje IDS
+-perform banner grabbing
+-scan for vulnerabilities
+-draw network diagrams
+-prepare proxies
+
+## scanning methodology
+-check for live systems
+-check for open ports
+-scan beyond the IDS
+-perform banner grabbing
+-scan for vulnerabilities
+-draw network diagrams
+-prepare proxies
+
+## three-way handshake
+-syn
+-syn/ack
+-ack
+
+## TCP header flags
+-synchronize(SYN) -set during the initial connection
+-acknowledgment(ACK) -set as an acknowledgment of SYN flag
+-reset(RST) -force termination for both communication direction
+finish(FIN) -signifies an ordered close to communication
+push(PSH) -force delivery of data w/out buffer
+urgent(URG) -indicate data is being sent out of band

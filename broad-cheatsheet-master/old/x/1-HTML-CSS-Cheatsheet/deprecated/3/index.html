@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Chilanka|Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="reset.style.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <p class="brand-name">Evangel Laclairs</p>
+      <nav>
+        <ul>
+          <li><a class="nav-link" href="#">Home</a></li>
+          <li><a class="nav-link" href="#explore">Explore</a></li>
+          <li><a class="nav-link" href="#" onclick="showLogin()">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="modal login-modal fadeInDown">
+      <div class="login">
+        <form>
+          <span class="x-mark" onclick="document.querySelector('.modal').style.display='none'">&times</span>
+          <h2>Login Here</h2>
+          <input type="text" name="" placeholder="Username or Email..">
+          <input type="password" name="" placeholder="Password..">
+          <button class="btn " type="submit" name="button">Login</button>
+          <span>forgot <a href="#">Password or Email?</a></span>
+        </form>
+        <button class="btn btn-danger" onclick="document.querySelector('.modal').style.display='none'">Close</button>
+        <a href="#" class="btn btn-secondary">Sign Up?</a>
+      </div>
+    </div>
+  </header>
+
+
+  <main>
+    <div class="container">
+
+      <section id="carousel">
+        <div class="carousel-inner">
+
+          <div class="carousel-item">
+            <img src="img/undraw_complete_task_u2c3.svg" alt="carousel image">
+            <div class="carousel-caption">
+              <div>
+                <h5>First slide label</h5>
+                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="img/undraw_steps_ngvm.svg" alt="carousel image">
+            <div class="carousel-caption">
+              <div>
+                <h5>Second slide label</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="img/undraw_selecting_1lx3.svg" alt="carousel image">
+            <div class="carousel-caption">
+              <div>
+                <h5>Third slide label</h5>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-indicators">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="explore">
+
+      </section>
+    </div>
+  </main>
+
+
+  <footer>
+
+    <div class="container">
+
+
+      <div class="col">
+        <div class="wrapper connect">
+          <h5>Stay connected</h5>
+          <p>Join over 25,000 people who recieve bi-weekly tips</p>
+          <div class="clearfix">
+            <input class="sub-input" type="text" name="" value="">
+            <button class="btn sub-btn" type="button" name="button">Sign-Up!</button>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="col">
+        <div class="wrapper something">
+          <h5>Somethings</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati deserunt fuga vitae voluptates vero sapiente dicta? Sunt cum, voluptates hic quis, autem minus esse eius quibusdam unde nihil accusantium, officiis!</p>
+        </div>
+      </div>
+
+
+      <div class="col">
+        <div class="wrapper">
+          <h5>Navigate</h5>
+            <ul class="footer-nav">
+              <li><a href="#">Navigation &rsaquo;</a> </li>
+              <li><a href="#">Navigation &rsaquo;</a> </li>
+              <li><a href="#">Navigation &rsaquo;</a> </li>
+              <li><a href="#">Navigation &rsaquo;</a> </li>
+              <li><a href="#">Navigation &rsaquo;</a> </li>
+            </ul>
+
+            <ul class="footer-nav ">
+              <li><a href="#">Navigation &rsaquo;</a> </li>
+              <li><a href="#">Navigation &rsaquo;</a> </li>
+              <li><a href="#">Navigation &rsaquo;</a> </li>
+              <li><a href="#">Navigation &rsaquo;</a> </li>
+              <li><a href="#">Navigation &rsaquo;</a> </li>
+            </ul>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="foot-text">
+      <div class="container">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+    </div>
+</div>
+    <div class="foot-nav">
+      <span><a href="#">Navigation &rsaquo;</a></span>
+      <span><a href="#">Navigation &rsaquo;</a></span>
+      <span>Copyright (c) 2018 Copyright Holder All Rights Reserved. </span>
+
+    </div>
+
+  </footer>
+  <script src="main.js" charset="utf-8"></script>
+</body>
+
+</html>

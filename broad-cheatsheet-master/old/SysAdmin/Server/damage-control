@@ -1,0 +1,46 @@
+ logging & monitoring
+-The server name if more than one server is writing to the log file
+-The URL, HTTP status code and incoming IP address
+-Diagnostic information
+-Error messages and stack traces
+-request timming / log request
+
+[event to log]
+-
+    Input validation failures, e.g. when the code encounters unexpected parameter names or values.
+    Authentication successes and failures.
+    Authorization (access control) failures.
+    Session management failures, e.g. when session cookies are rejected as invalid.
+    Application errors and system events.
+    Startup and shutdown events - including timing information!
+    User events like sign-ups, password changes and account deletions.
+    Administrative events, e.g. when permissions are changed by an admin.
+    Calls to third-party services or APIs.
+    Legal and other opt-ins, e.g. when a user accepts the terms of use.
+
+[ not to log ]
+
+
+    User or system passwords.
+    Encryption keys.
+    Database connection strings.
+    API keys for third-party services.
+    Personally identifiable information about users.
+    Payment information like credit card numbers.
+    Sensitive HTTP headers, such as Authorization headers.
+    Session IDs or session cookies.
+    Access tokens - for example, those used during sign-ups or password resets.
+    Information a user has opted out of collection. The “right to be forgotten” is law in many parts of the world, and this includes data in log files.
+
+[uptime monitoring]
+
+[performance monitoring]
+Responsiveness: how long it takes to respond to each web request.
+Throughput: how many requests per second are hitting your site.
+Memory usage and server load: how much of each server’s memory space is being used up, and how close each server is to full capacity.
+Database performance: how many queries are being run per second and how many concurrent connections there are
+
+[alerts for unusual error/sensitive data]
+
+make response plan
+-blacklist IP
