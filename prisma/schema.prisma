@@ -1,0 +1,68 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// prisma: show available commands
+// prisma init: setup a nwe prisma project
+// prisma migrate dev: database migration
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// create a Post model
+model Post {
+  // type: int, default: auto_increment
+  // @id: PRIMARY KEY
+  id         Int        @id @default(autoincrement())
+  // type: DateTime, default: current_timestamp
+  createdAt  DateTime   @default(now())
+  // type: DateTime
+  updatedAt  DateTime   @updatedAt
+  // type: String, length: 255
+  title      String     @db.VarChar(255)
+  // type: string, optional: true
+  content    String?
+  // type: Boolean, default: false
+  published  Boolean    @default(false)
+  // relatioship: User, relationship type: one to many
+  author     User       @relation(fields: [authorId], references: [id])
+  // type: int
+  authorId   Int
+  // relationship type: many to many
+  categories Category[]
+}
+
+model Profile {
+  // type: int, default: auto_increment
+  id     Int     @id @default(autoincrement())
+  // type: string, optional: true
+  bio    String?
+  // relationship: User, relationship type: one to one
+  user   User    @relation(fields: [userId], references: [id])
+  // type: int, unique: true
+  userId Int     @unique
+}
+
+model User {
+  // type: int, default: auto_increment
+  id      Int      @id @default(autoincrement())
+  // type: string, unique: true
+  email   String   @unique
+  // type: string, optional: true
+  name    String?
+  // ralationship type: one to many | Post[]
+  // : defined relationship | user & userId column
+  posts   Post[]
+  // relationship type: one to one | Profile?
+  profile Profile?
+}
+
+model Category {
+  // type: int, default: auto_increment
+  id Int @id @default(autoincrement())
+  posts Post[]
+}
